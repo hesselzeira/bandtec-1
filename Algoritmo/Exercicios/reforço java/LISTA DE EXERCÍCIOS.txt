@@ -1,0 +1,154 @@
+Lista de Exercícios 03-B - Javascript básico (REFORÇO)
+
+1. Elis Tranha é nutricionista e quer ajuda na hora e sugerir dietas de café da manhã para seus pacientes. Ela precisa de um programa que:
+
+Tenha na sua tela os seguintes campos:
+
+"Quantas bananas?"
+
+"Quantos pães com manteiga?"
+
+"Quantos copos de café com leite?"
+
+Abaixo dos campos, um botão "Calcular calorias". Ao clicar nesse botão, deve aparecer abaixo dele uma frase como esta:
+
+Sua dieta com B bananas, P pa?s com manteiga e C copos de café com leite vai te fornecer X calorias
+
+O cálculo para X é:
+
+1 Banana: 20 calorias
+
+1 Pão com manteiga: 80 calorias
+
+1 Copo de café com leite: 30 calorias
+
+
+
+2. Para a pessoa entrar em forma, alguns profissionais de saúde acreditam que 80% é alimentação e 20% é por conta de exercícios físicos. Crie um programa onde a pessoa informa seu nome e 2 notas, ambas de 0 a 10:
+
+"Qual seu nome?"
+
+"Qual a nota de sua alimentação?"
+
+"Qual a nota de seus hábitos de exercícios?"
+
+Abaixo desses campos, um botão "Calcular saúde". Ao clicar nesse botão, deve aparacer abaixo dele a mensagem...
+
+Olá, NOME. Sua saúde é nota X.
+
+O cálculo de X é: 80% da nota da alimentação mais 20% da nota dos exercícios.
+
+
+
+3. Rute Imosa está abrindo um lojinha. Ela quer um programa que ajude ela a calcular o preço de venda dos produtos a partir do preço de compra. Esse programa deve ter em sua tela:
+
+Um campo "Nome do produto"
+
+Um campo "Preço de compra produto"
+
+Um botão "Calcular preço de venda"
+
+Ao clicar no botão, deve aparecer abaixo dele uma frase como esta:
+O produto NOME deve ser vendido por R$X
+Esse X é o preço de compra mais 50%. Por exemplo: se o produto foi comprado por 100, deve ser vendido por 150. Se foi comprado por 80 deve ser vendido por 120.
+
+
+
+4. Rute Imosa está abrindo outra lojinha. Ela quer um novo programa que ajude ela a calcular o preço de venda dos produtos a partir do preço de compra, mas com aperfeiçoamentos com relação ao anterior. Esse programa deve ter em sua tela:
+
+Um campo "Nome do produto"
+
+Um campo "Preço de compra produto"
+
+Um campo "Porcentagem de lucro"
+
+Um botão "Calcular preço de venda"
+
+Ao clicar no botão, deve aparecer abaixo dele uma frase como esta:
+O produto NOME deve ser vendido por R$X
+Esse X é o preço de compra mais a porcentagem indicada. Por exemplo: se o produto foi comprado por 100 e a porcentagem de lucro indicada foi 30, deve ser vendido por 130. Se foi comprado por 80 e a porcetagem de lucro indicada foi 90 deve ser vendido por 152.
+
+
+
+5. Rute Imosa está abrindo outra lojinha (faz jus ao nome a moça, né?). Ela quer um novo programa que ajude ela a calcular o preço de venda dos produtos a partir do preço de compra, mas com aperfeiçoamentos ainda. Esse programa deve ter em sua tela:
+
+Um campo "Nome do produto"
+
+Um campo "Preço de compra produto"
+
+Um campo "Porcentagem de impostos na venda"
+
+Um campo "Porcentagem de lucro"
+
+Um botão "Calcular preço de venda"
+
+Ao clicar no botão, deve aparecer abaixo dele uma frase como esta:
+O produto NOME deve ser vendido por R$X
+Esse X é o preço de compra mais a porcentagem dos impostos mais a porcentagem indicada. Por exemplo: se o produto foi comprado por 100 e a porcentagem de lucro indicada foi 30 e a porcentagem de impostos for 10, deve ser vendido por 140. 
+
+Ou seja, a porcetagem de impostos deve incidir sobre o preço de venda, assim como a porcentagem de lucro.
+
+
+6. Um dono de pequena lanchonete precisa saber que frutas vai usar conforme os preços atuais das frutas possíves de se usar numa salada para 10 porções. Crie um programa pra ele que tenha os seguintes campos:
+
+"Preço da laranja"
+"Quantas laranjas vai usar"
+
+"Preço da maçã"
+
+"Quantas maçãs vai usar"
+
+"Preço da banana"
+"Quantas bananas vai usar"
+
+"Preço da uva"
+"Quantas uvas vai usar"
+
+Abaixo deles, um botão "Calcular preço da salada". Ao clicar nele, deve aparecer abaixo dele a Sua salada vai custar R$X e cada porção, R$Y.
+X é a soma do custo de cada fruta (o custo é seu preço x a quantidade usada).
+
+Y é X dividido por 10 (já que a salada redne 10 porções).
+
+
+7. Procure 4 imagens na internet, que são os escudos de 4 times de futebol de qualquer lugar do mundo. De preferência, elas devem conter tamanhos parecidos. Na tela do programa deve haver uma combo box com os itens (os nomes de times são exemplos apenas):
+      - Escolha um time -
+      Barcelona
+      Manchester United
+      Juventus
+      Clube do Remo
+Abaixo da combo box, um botão "Exibir escudo", deve acontecer o seguinte...
+Caso seja escolhido o 1º item: Nenhuma imagem deve aparecer na tela
+Caso seja escolhido do 2º ao 4º item: Deve aparecer o escudo do time selecionado
+
+
+#FICADICA: Para fazer uma imagem aparecer, usamos a tag <img>, lembra? A imagem a ser exibida, pode estar na mesma pasta do arquivo .html ou na internet, bastando indicar seu nome ou endereço no atributo src da tag <img>. Logo, para mudar a imagem de uma tag <img>, basta:
+
+ a) Dar um identificador para a <img> 
+
+ b) Para alterar sua imagem, basta alterar seu src. Ex: para alterar a imagem de <img id="foto_pessoa">, fazemos: foto_pessoa.src = 'alegre.jpg'. 
+
+ c) Para fazer a imagem "sumir" basta alterar deixar seu src vazio. Ex: foto_pessoa.src = ''. 
+
+
+
+8. Procure 3 imagens na internet, de preferência com tamanhos parecidos. Uma deve ser de uma essoa super bem feliz e disposta. A outra de uma pessoa um pouco cansada ou apenas "normal". A terceira deve ser de uma pessoa "acabada", esgotada, super cansada.
+
+A página deve conter uma combo box com os seguintes itens:
+
+      - Selecione um item -
+
+      Dorme muito bem
+
+      Dorme entre 4 e 6 horas por noite
+
+      Dorme menos de 4 horas por noite
+
+Abaixo da combo, um botão "Mostrar o efeito sobre a pessoa". Ao clicar no botão, deve acontecer o seguinte...
+
+Caso seja escolhido o 1º item: Nenhuma imagem deve aparecer na tela
+
+Caso seja escolhido o 2º item: Deve aparecer a imagem da pessoa animada na tela
+
+Caso seja escolhido o 3º item: Deve aparecer a imagem da pessoa "normal" na tela
+
+Caso seja escolhido o 4º item: Deve aparecer a imagem da pessoa "acabada" na tela

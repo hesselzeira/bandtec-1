@@ -1,0 +1,21 @@
+> maior
+< menor
+>= maior igual
+<= menor igual 
+== igual
+!= diferente 
++= aumentar o valor da variavel mais ela mesma 
+	++ aumenta de um em um 
+-= diminui o valor da variavel menos ela mesma
+	-- diminui de um em um
+
+:)
+
+expressão boolean (binário 0 e 1)
+
+<b> O 'if' é uma estrutura de decisão.</b>
+
+o bloco if-else = se-senão / vivo-morto, não tem meio termo 
+
+
+

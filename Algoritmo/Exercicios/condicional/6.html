@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cadastre aqui:</h2>
+
+    <form>
+        Renda do pai:
+        <input type="number" id="pai"><br>
+        Renda da mãe:
+        <input type="number" id="mae"><br>
+        Renda dos avós:
+        <input type="number" id="vo"><br>
+    </form>
+
+    <button type="button" onclick="verificar_renda()">Verificar situação social</button>
+
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function verificar_renda() {
+        var frase;
+        var renda = Number(pai.value) + Number(mae.value) + Number(vo.value);
+
+        if (renda<150.55) {
+            frase = 'Abaixo da linha da pobreza!';
+        }
+
+        else {
+            frase = 'Acima da linha da pobreza';
+        }
+
+        mensagem.innerHTML = frase;
+    }
+</script>

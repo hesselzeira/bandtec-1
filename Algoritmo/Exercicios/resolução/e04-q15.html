@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id="foto_porquinho" src="porquinho-cofrinho.png">
+
+    <form>
+        Qual a meta?
+        <input type="number" id="meta">
+        <br>
+        Novo Depósito
+        <input type="number" id="deposito">
+        <br>
+
+        Total depositado até agora: R$<b id="b_total">0</b>
+
+        <br> <br>
+        <button type="button" onclick="depositar()">
+            Depositar
+        </button>
+    </form>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+function depositar() {
+    // recuperando o valor depositado na frase
+    var total = Number(b_total.innerHTML);
+
+    // aumentando o valor conforme o "deposito"
+    total = total + Number(deposito.value);
+
+    // jogando o novo valor de volta na frase
+    b_total.innerHTML = total;
+
+    // verificando se a meta já foi atingida
+    var cor;
+    var frase;
+    if (total >= meta.value) {
+        // sim, já foi atingida ou ultrapassada
+        cor = 'blue';
+        frase = 'Ai sim! Bati a meta!';
+
+        // alterando a foto do porquinho
+        foto_porquinho.src = 'porquinho-feliz.jpg';
+    } else {
+        // ainda NÃO bateu a meta
+        cor = 'green';
+        var falta = meta.value - total;
+        frase = `Ainda falta R$${falta.toFixed(2)} para a meta! #focanameta`;
+    }
+
+    // preenchendo a div de resultado e mudando sua cor
+    div_resultado.innerHTML = frase;
+    div_resultado.style.color = cor;
+}
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Viagem</title>
+</head>
+<body>
+    <form>
+        Por onde você já viajou? <br>
+        <input type="text" id="viagem_cadastrada"> <br>
+        <button type="button" onclick="cadastrar()">Cadastrar local</button> <br><br>
+
+        Qual viajem você quer recordar? <br>
+        <input type="number" id="relembrar_viagem"> <br>
+        <button type="button" onclick="historico()">Relembrar Viagem</button> 
+
+        <div id="mensagem"></div>
+
+    </form>
+</body>
+</html>
+<script>
+    var viagem= [];
+
+    function cadastrar(){
+        viagem.push(viagem_cadastrada.value);
+        mensagem.innerHTML = 'Viajem cadastrada com sucesso!';
+    }
+
+    function historico(){
+       
+
+        if( relembrar_viagem.value> viagem.length){
+            alert(`Opa! Você não fez a ${relembrar_viagem.value}ª viagem!`);
+        }
+
+        else{
+            var mens = viagem[relembrar_viagem.value -1]
+            mensagem.innerHTML = `local visitado: ${mens}`;
+        }
+    }
+</script>

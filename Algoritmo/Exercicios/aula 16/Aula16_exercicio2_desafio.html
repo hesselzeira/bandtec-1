@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcule sua aposentadoria</title>
+</head>
+<body>
+    <h2>Quanto tempo falta para eu me aposentar?</h2>
+
+    <form>
+
+    Sua idade, em anos, por favor: <br> 
+    <input type="number" id="idade"><br><br>
+    <button type="button" onclick="calcular_idade_mulheres()">Aposentadoria Mulheres</button>
+    <button type="button" onclick="calcular_idade_homens()">Aposentadoria Homens</button>
+            
+    </form>
+</body>
+</html>
+<script>
+function calcular_idade_mulheres () {
+    var total = 60 - idade.value;
+
+    alert (`Faltam ${total} anos para você se aposentar! :D`);
+}
+
+function calcular_idade_homens () {
+    var total = 65 - idade.value;
+
+    alert (`Faltam ${total} anos para você se aposentar! :D`)
+}
+
+</script>

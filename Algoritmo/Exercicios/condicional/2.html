@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Bolsa Família</h2>
+ 
+        Salário da mãe
+        <input type="number" id="mae"><br>
+
+        Salário do pai 
+        <input type="number" id="pai"><br><br>
+        <button type="button"  onclick="salario()">Verificar Bolsa Família</button>
+    </form>
+
+    <div id="div_a" style="color: red;"></div>
+    <div id="div_b" style="color:blue;"></div>
+</body>
+</html>
+<script>
+    function salario () {
+        var a = Number(mae.value) + Number(pai.value);
+    
+    if (a<250.70) {
+        div_b.innerHTML = 'Você tem direito ao Bolsa Família :)';
+    }
+    
+    else {
+        div_a.innerHTML = 'Nada de Bolsa Família :(';
+    }
+    }
+</script>

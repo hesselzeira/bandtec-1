@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 17</title>
+</head>
+<body>
+    <h2>Funções de conversões de números</h2>
+
+    <form>
+1ª Nota <input type="number" id="nota1"><br>
+2ª Nota <input type="number" id="nota2"><br>
+<br>
+
+<button type="button" onclick="calcular_media()">Calcular média</button>
+
+    </form>
+</body>
+</html>
+<script>
+    function calcular_media() {
+        //convertendo texto em números
+        //função Number()
+    var media = (Number(nota1.value) + Number(nota2.value)) / 2;
+
+    alert (`Sua média é: ${media}!`);
+    }
+</script>

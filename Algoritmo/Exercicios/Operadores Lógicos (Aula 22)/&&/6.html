@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Usuário <br>
+        <input type="text" id="login"><br><br>
+        Senha <br>
+        <input type="password" id="senha" > <br> <br>
+
+        <button type="button" onclick="logar()">Entrar</button>
+        
+            <div id="mensagem"></div>
+    </form>
+</body>
+</html>
+<script>
+    function logar(){
+        var frase;
+        var cor;
+        if (login.value == 'amor' && senha.value == 'amor123'){
+            frase = 'Usuário autenticado';
+            cor = 'green';
+        }
+
+        else {
+            frase = 'Falha na autentificação';
+            cor = 'red';
+        }
+
+        mensagem.innerHTML =  frase; 
+        mensagem.style.color = cor;
+    }
+</script>

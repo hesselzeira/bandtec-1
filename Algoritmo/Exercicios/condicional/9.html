@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Média alunos</title>
+</head>
+<body>
+    <form>
+        Nome do aluno
+        <input type="text" id="nome" placeholder="Digite o nome do aluno..."><br><br>
+        Média das continuadas <input type="number" id="cont"><br><br> 
+        Nota da integrada <input type="number" id="inte"><br><br>
+
+        <button type="button" onclick="resultado()">Verificar resultado</button>
+    </form>
+
+    <div id="feliz" style="color:rgb(15, 15, 173);"></div>
+    <div id="triste" style="color: red;"></div>
+
+</body>
+</html>
+<script>
+    function resultado(){
+        var media = 0.20*cont.value + 0.80*inte.value;
+
+            if (media>=5) {
+                feliz.innerHTML= `Parabéns, ${nome.value}, você foi aprovado com média final ${media.toFixed(2)}.`;
+                //feliz.innerHTML = media.toFixed(2);
+            }
+
+             else {
+                triste.innerHTML = `Olá, ${nome.value}, infelizmente você foi reprovado com média final ${media.toFixed(2)}`;
+                  //  triste.innerHTML = media.toFixed(2);
+             }
+             
+
+       
+        
+    }
+
+    
+</script>

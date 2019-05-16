@@ -1,0 +1,13 @@
+/* Um arquivo .CSS só pode conter definições CSS */
+/* Nele definimos estilos de tags, classes e ids */
+h2 {
+    color: red;
+}
+
+p {
+    color: blueviolet;
+}
+
+b {
+    font-size: 2em;
+}

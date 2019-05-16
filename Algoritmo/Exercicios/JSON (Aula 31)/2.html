@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Nome do 1º time:
+        <input type="text" id="nome_time1"> <br>
+        Vitória: <input type="number" id="vitoria1"> <br>
+        Empate: <input type="number" id="empate1"> <br>
+        Derrota: <input type="number" id="derrota1"> <br>
+    </form>
+    <br>
+    <br>
+    <form>
+        Nome do 2º time:
+        <input type="text" id="nome_time2"> <br>
+        Vitória: <input type="number" id="vitoria2"> <br>
+        Empate: <input type="number" id="empate2"> <br>
+        Derrota: <input type="number" id="derrota2"> <br>
+    </form>
+
+    <br>
+    <button type="button" onclick="comparar()">Comparar campanhas</button>
+
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function pontuacao(time) {
+        return (campanha.v * time.v) + (campanha.e * time.e)
+    }
+
+    function comparar() {
+        var campanha = { v: 3, e: 1, d: 0 }
+
+        var time1 = {
+            nome: nome_time1.value,
+            v: Number(vitoria1.value),
+            e: Number(empate1.value),
+            d: Number(derrota1.value)
+        }
+
+        var time2 = {
+            nome: nome_time2.value,
+            v: Number(vitoria2.value),
+            e: Number(empate2.value),
+            d: Number(derrota2.value)
+        }
+
+        mensagem.innerHTML = `O time ${time1.nome} terminou o campeonato com ${pontuacao(time1)} pontos. <br>
+                             O time ${time2.nome} terminou o campeonato com ${pontuacao(time2)} pontos.`
+
+    }
+</script>

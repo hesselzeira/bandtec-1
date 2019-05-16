@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avaliação</title>
+</head>
+<body>
+
+    <form>
+        Nota de avaliação: <br>
+        <input type="number" id="avaliacao"> <br>
+        <button type="button" onclick="exibir()">Avaliar</button>
+    </form>
+
+    <div id="estrela"></div>
+
+</body>
+</html>
+<script>
+    function exibir(){
+        var nota= Number(avaliacao.value);
+
+        estrela.innerHTML= ''
+        
+        if (nota < 1 || nota > 10){
+            alert('Valor inválido. Só aceito entre 1 e 10')
+        }
+
+        else{
+
+            for(contador=0; contador<nota; contador+=2){
+            estrela.innerHTML += `<img src="star.png" style="width: 60px">`
+            } 
+        }
+    }
+</script>

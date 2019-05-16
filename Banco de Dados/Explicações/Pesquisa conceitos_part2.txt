@@ -1,0 +1,39 @@
+>> Domínio de um atributo 
+	
+	"O domínio é um conjunto de valores que possuem determinadas 
+	prioridades em comum; ao conjunto de todos os valores possíveis
+	para um determinados atributo dá-se o nome de domínio. 
+	O domínio engloba dados atómicos ou simples, porque não podem 
+	sofrer mais nenhuma decomposição."
+
+
+		o que define/ conjunto de valores que o atributo pode assumir.
+		útil para a validação. e podemos fazer com a temperatura.
+
+>> Entidade primária/entidade forte
+
+	A entidade primária é a comum que estudamos em aula. 
+	Não depende de nada para existir.
+
+>> Entidade depedente ou entidade fraca
+
+	Ela existe em um relacionamento dependendo te duas entidades para existir.
+	No BR modelo, quando a relação estiver com uma linha em negrito, significa 
+	que a mesma é uma entidade fraca :)
+
+>> Relacionamento identificador ou tipo dependência
+
+	Relacionamento que existe entre uma entidade forte e fraca. 	
+	
+
+>> Relacionamento recursivo
+
+	Quando uma entidade se relaciona com ela mesma.
+
+>> Grau do relaciomento 
+
+	é o tanto de entidades que estão relacionadas. 
+	
+	Número de entidade que se relaciona
+
+	software - ERWIN - não tem versão free.

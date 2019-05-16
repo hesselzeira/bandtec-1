@@ -1,0 +1,4 @@
+A Entidade Generalizada é como se fosse um padrão que se repete em várias entidades 
+
+E a entidade especializada é quando voocê se deriva delas 
+

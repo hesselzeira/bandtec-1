@@ -1,0 +1,5 @@
+Diferente do &&, o Pipe (||) significa "ou"
+
+é o cara bom, não depende de todos ser falso ou verdadeiro
+
+'Salva todos'

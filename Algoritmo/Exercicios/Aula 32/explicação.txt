@@ -1,0 +1,15 @@
+>>>Vetor ou Array<<<<
+
+Variavél com vários 
+
+xxxxx[]
+
+xxxxx.push - inserir mais dados na variavel
+xxxxx - mostra os valores
+xxxxx.length - tamanho do vetor para saber 
+
+para saber o 2º valor inserido para recuperar
+(posição ou índice)
+xxxxx.[1]
+
+não confundir contagem com índice 

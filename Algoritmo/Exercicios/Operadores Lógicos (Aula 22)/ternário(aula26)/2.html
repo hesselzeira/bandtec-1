@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        Insira seu salário:
+        <input type="number" id="salario"> <br><br>
+        <button type="button" onclick="verificar()">Ver situação</button>
+    </form>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var frase;
+        
+        var salario = Number(salario.value) <200 ? 'Bem pobre': Number(salario.value) <= 1200? 'pobre' : 
+        Number(salario.value)<= 2000? 'nem tão pobre': 'classe média ou rico';
+
+        mensagem.innerHTML = frase;
+
+    }
+</script>

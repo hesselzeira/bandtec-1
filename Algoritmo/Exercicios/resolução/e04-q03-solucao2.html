@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Salário do Pai: <input type="number" id="sal_pai">
+        <br>
+        Salário na Mãe: <input type="number" id="sal_mae">
+        <br><br>
+        <button type="button" onclick="bolsa_familia()">
+            Verificar Bolsa Família</button>
+
+            <br>
+
+        <div id="div_combolsa" style="color:blue"></div>
+        <div id="div_sembolsa" style="color:red"></div>    
+    </form>
+</body>
+</html>
+<script>
+
+function bolsa_familia() {
+    var renda_familiar = Number(sal_pai.value) + Number(sal_mae.value);
+    
+    if (renda_familiar < 250.70) {
+        
+        // exibindo a div azul
+        div_combolsa.style.display = 'inline'; // pode ser 'block'
+        // ecultando a div vermelha
+        div_sembolsa.style.display = 'none';
+
+        div_combolsa.innerHTML = 'Você tem direito a Bolsa Familia';
+
+    } else {
+        
+        // exibindo a div vermelha
+        div_sembolsa.style.display = 'inline'; // pode ser 'block'
+        // ecultando a div azul
+        div_combolsa.style.display = 'none';
+
+        div_sembolsa.innerHTML = 'Nada de Bolsa Familia';
+    }  
+
+}
+
+</script>

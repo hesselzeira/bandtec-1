@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14</title>
+</head>
+
+<body>
+    Estação atual: <br>
+    <input type="number" id="estacao_atual"> <br><br>
+    Estação de destino: <br>
+    <input type="number" id="estacao_destino"> <br><br>
+    <button type="button" style="scroll-margin:20px" onclick="partir()">Partir</button>
+
+    <div id="mensagem" style="padding:20px"></div>
+
+</body>
+
+</html>
+<script>
+    function partir() {
+
+        var destino = Number(estacao_destino.value);
+        var atual = Number(estacao_atual.value);
+
+        if (destino == atual) {
+            mensagem.innerHTML = 'O metrô continuará onde está';
+
+        } else if (destino > 16 || atual > 16 || destino < 0 || atual < 0) {
+            mensagem.innerHTML = 'Estações válidas: entre 0 e 16';
+        }
+
+        else {
+
+            var contador = atual;
+
+            if (destino > atual) {
+
+                mensagem.innerHTML = 'Indo para o norte';
+
+                while (contador <= destino) {
+
+                    mensagem.innerHTML += `<br> Metrô na estação ${contador}`
+
+                    contador++;
+                }
+            }
+           
+            else if (destino < atual) {
+
+                mensagem.innerHTML = 'Indo para o sul';
+
+                while (contador >= destino) {
+
+                    mensagem.innerHTML += `<br> Metrô na estação ${contador}`
+
+                    contador--;
+                }
+            }
+        }
+
+    }
+</script>

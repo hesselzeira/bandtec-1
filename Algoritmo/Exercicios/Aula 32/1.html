@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>treino</title>
+</head>
+<body>
+    <form>
+        Fale o nome filme que você mais gosta: <br>
+        <input type="text" id="novo_filme"> <br>
+        <button type="button" onclick="cadastrar()">Cadastrar filme</button>
+        <button type="button" onclick="ver_historico()">Ver favoritos</button>
+
+        <div id="div_filmes"></div>
+
+    </form>
+</body>
+</html>
+<script>
+
+    // vetor ou array vazio
+    var filmes = [];
+
+
+    function cadastrar(){
+        // inserindo elemento no vetor
+        filmes.push(novo_filme.value);
+        div_filmes.innerHTML = 'Filme cadastrado com sucesso!';
+    }
+
+    function ver_historico(){
+        var texto = `Filmes: ${filmes} <br> Total: ${filmes.length} <br>
+                       Filme que você mais gosta: ${filmes[0]} <br>
+                       Filmes que você menos gosta: ${filmes[filmes.length - 1]}`;
+
+        div_filmes.innerHTML = texto;
+
+
+    }
+</script>

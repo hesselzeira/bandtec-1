@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 16</title>
+</head>
+<body>
+    <form>
+
+        Depósito:
+<input type="number" id="deposito" placeholder="Digite o valor..."><br><br>
+
+
+Total:
+<input type="number" id="valor_total" value="0" placeholder="Valor total"> <br><br>
+
+<button type="button" onclick="calcular()">Depositar</button>
+    </form>
+
+</body>
+
+<script>
+
+function calcular() {
+    var resultado = 0;
+    resultado = deposito.value*1;
+    resultado = valor_total.value*1 + resultado;
+    valor_total.value = resultado;
+
+}
+</script>

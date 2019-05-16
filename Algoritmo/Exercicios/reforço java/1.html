@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+    </title>
+</head>
+<body>
+    <form>
+        <h2 style="font-family:Arial, Helvetica, sans-serif;">Dr. Elis Tranha</h2>
+        Quantas babanas? <br>
+        <input type="number" id="ban"> <br><br>
+
+        Quantos pães com manteiga? <br>
+        <input type="number" id="pao"> <br><br>
+
+        Quantos copos de café com leite? <br>
+        <input type="number" id="leite"> <br><br>
+
+       </form> 
+       
+       <button type="button" onclick="calcular()">Calcular calorias</button>
+
+       <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        
+         var x = ban.value * 20;
+         var y = pao.value * 80;
+         var z = leite.value * 30;
+
+         var k = x + y + z;
+        
+        div_mensagem.innerHTML = `Sua dieta com ${ban.value} bananas, ${pao.value} pães com manteiga e ${leite.value} café com leite 
+        vai te fornecer ${k} calorias`;
+    }
+
+
+
+</script>

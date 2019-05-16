@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcule sua aposentadoria</title>
+</head>
+<body>
+
+    <h1>Saiba quantos anos ainda faltam para você se aposentar:</h1>
+    <form>
+        Sua idade: <input type="number" id="idade"><br><br>
+        <button type="button" onclick="calcular_idade()">Verificar tempo</button>
+    </form>
+</body>
+</html>
+<script>
+function calcular_idade () {
+    var total = 65 - idade.value;
+
+alert (`Faltam ${total} para você se aposentar!`);
+}
+
+</script>

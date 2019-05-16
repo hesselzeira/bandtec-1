@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ELEVADOR COM FOR</title>
+</head>
+
+<body>
+    Andar atual: <br>
+    <input type="number" id="andar_atual">
+    <br>
+    Andar solicitado: <br>
+    <input type="number" id="andar_solicitado"><br>
+    <br>
+
+    <button type="button" onclick="partir()">#PARTIU</button>
+
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function partir() {
+        var atual = Number(andar_atual.value);
+        var solicitado = Number(andar_solicitado.value);
+
+        mensagem.innerHTML = '';
+
+        if (atual < 0 || atual > 20 || solicitado < 0 || solicitado > 20) {
+            alert('Andares válidos: entre 0 e 20')
+        }
+
+        else if (atual == solicitado) {
+            mensagem.innerHTML = 'Elevador vai continuar onde está';
+        }
+
+        else {
+
+            if (atual < solicitado){
+                mensagem.innerHTML= 'Subindo <br>';
+
+                for (contador = atual; contador <= solicitado; contador++)
+                    mensagem.innerHTML += `${contador}<br>`;
+            }
+
+            else if (atual > solicitado){
+                mensagem.innerHTML = 'Descendo <br>';
+
+                for (contador = atual; contador >= solicitado; contador --)
+                    mensagem.innerHTML += `${contador} <br>`;
+            }
+    
+        }
+    }
+</script>

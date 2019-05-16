@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Biólogo</title>
+</head>
+<body>
+    <form> 
+        Qual a idade dessa árvore? 
+        <input type="number" id="idade">
+
+        <button type="button" onclick="validar_idade()">Validar idade</button>
+    </form>
+
+     <div id="a"></div>
+</body>
+</html>
+<script>
+    function validar_idade(){
+
+    var frase;
+
+        if (idade.value=0) {
+            frase = `Idade inválida!`;
+            a.innerHTML = frase;
+        }
+
+        else {
+            frase = 'Idade válida';
+            a.innerHTML = frase;
+        }
+    }
+</script>

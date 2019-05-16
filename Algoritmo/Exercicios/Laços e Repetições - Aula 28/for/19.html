@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Informe seu número da sorte: <br>
+    <input type="number" id="numero_da_sorte" placeholder="você tem sorte mesmo?"> <br><br>
+    <button type="button" style="padding:40px" onclick="sortear()">Sortear</button>
+
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function sortear() {
+        var numSorte = Number(numero_da_sorte.value);
+        var contSorte = 0;
+
+        mensagem.innerHTML = '';
+
+        for (contadorzin = 1; contadorzin <= 7; contadorzin++) {
+            var aleatorio = parseInt(Math.random() * 100);
+            mensagem.innerHTML += `<b>Sorteio ${contadorzin}:</b> ${aleatorio} <br>`
+            
+            if (numSorte == aleatorio)
+                contSorte++
+        }
+
+
+        if (contSorte > 0) {
+            alert('Parabéns, você tem sorte!')
+        }
+
+        else {
+            alert('Você não é tão sortudo :/')
+        }
+    }
+</script>

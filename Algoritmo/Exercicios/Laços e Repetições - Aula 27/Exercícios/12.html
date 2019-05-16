@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="exibir10e40()" style="padding:30px">Ver os pares</button>
+    <button type="button" onclick="exibir30e50()" style="padding:30px">Ver os ímpares</button>
+
+    <ul id="lista_pares"></ul>
+    <ul id="lista_impares"></ul>
+
+</body>
+
+</html>
+<script>
+    function exibir10e40() {
+
+        var contador = 10;
+
+        lista_pares.innerHTML= '';
+        lista_impares.innerHTML= '';
+        
+        while (contador <= 40) {
+            lista_pares.innerHTML += `<li>${contador}</li>`;
+            // lista_pares.style.display = 'block';
+            contador += 2;
+        }
+        
+        
+    }
+    
+    function exibir30e50() {
+        
+        var contador2 = 30;
+        
+        lista_pares.innerHTML= '';
+        lista_impares.innerHTML= '';
+        
+        while (contador2 <=50) {
+            lista_impares.innerHTML += `<li>${contador2}</li>`;
+            contador2 += 3;
+        }
+        
+
+    }
+</script>

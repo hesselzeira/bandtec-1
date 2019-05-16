@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>#PartiuFeira</title>
+</head>
+
+<body>
+    <form>
+
+        <h2>O que deseja?</h2>
+
+        Quantas bananas? <br>
+        <input type="number" id="banana"> <br>
+        <input type="number" id="pbanana" placeholder="Digite o preço..."> <br>
+        <br>
+
+        Quantos brócolis? <br>
+        <input type="number" id="brocolis"> <br>
+        <input type="number" id="pbrocolis" placeholder="Digite o preço..."> <br>
+        <br>
+
+        Quantas cenouras? <br>
+        <input type="number" id="cenoura"> <br>
+        <input type="number" id="pcenoura" placeholder="Digite o preço..."> <br>
+        <br>
+
+        Quantas maçãs? <br>
+        <input type="number" id="maca"> <br>
+        <input type="number" id="pmaca" placeholder="Digite o preço..."> <br>
+        <br>
+
+        Quantos kilos você aguenta carregar em sua sacola? <br>
+        <input type="number" id="pesousuario"> <br><br>
+
+        <button type="button" onclick="exibir()">Fazer feira</button>
+    </form>
+
+    <div id="mensagem" style="padding:10px"></div>
+    <div id="frase"></div>
+    <div id="compras" style="border: solid 2px black; display: none"></div>
+
+</body>
+
+</html>
+<script>
+    function exibir() {
+
+        var qtdbanana = Number(banana.value);
+        var qtdbrocolis = Number(brocolis.value);
+        var qtdcenoura = Number(cenoura.value);
+        var qtdmaca = Number(maca.value);
+
+        var pesobanana = 0.50;
+        var pesobrocolis = 0.15;
+        var pesocenoura = 0.30;
+        var pesomaca = 0.25;
+
+        var precobanana = Number(pbanana.value);
+        var precobrocolis = Number(pbrocolis.value);
+        var precocenoura = Number(pcenoura.value);
+        var precomaca = Number(pmaca.value);
+
+        var qtdtotal = qtdbanana + qtdbrocolis + qtdcenoura + qtdmaca;
+
+        var pesototal = (qtdbanana * pesobanana) + (qtdbrocolis * pesobrocolis) +
+            (qtdcenoura * pesocenoura) + (qtdmaca * pesomaca);
+
+        var precototal = (precobanana * qtdbanana) + (precobrocolis * qtdbrocolis) +
+            (precocenoura * qtdcenoura) + (precomaca * qtdmaca);
+
+        var contador = 0;
+
+
+        if (qtdtotal < 0 || qtdtotal > 12) {
+            alert('Cada produto deve ter entre 0 e 12 de quantidade');
+        } else if (pesototal < 0.5 || pesototal > 20) {
+            alert('O peso que o usuário aguenta deve ter entre 0.5kg e 20kg');
+        } else {
+            mensagem.innerHTML = `Valor total das compras: R$${precototal} <br>
+                                  Peso total das compras: ${pesototal.toFixed(1)}kg`;
+
+            if (pesototal > pesousuario.value) {
+                frase.innerHTML = ''
+                frase.innerHTML = 'Deu ruim! O usuário não vai conseguir carregar essas compras!'
+                frase.style.color = "red";
+            }
+
+            else if (qtdbanana == 0 && qtdmaca == 0) {
+                frase.innerHTML = 'Opa! Você precisa comer mais frutas, viu?!'
+                frase.style.color = "green";
+            }
+
+
+            else {
+                
+                compras.innerHTML = '';
+
+                while (contador < qtdbanana) {
+
+                    compras.innerHTML += `<img src="banana.jpg" width="70px">`
+                    compras.style.display = "block";
+
+                    contador++;
+                }
+
+                contador = 0;
+                
+                while (contador < qtdbrocolis) {
+
+                    compras.innerHTML += `<img src="brocolis.jpg" width="70px">`
+                    compras.style.display = "block";
+
+                    contador++;
+                }
+
+                contador = 0;
+
+                while (contador < qtdcenoura) {
+
+                    compras.innerHTML += `<img src="cenoura.jpg" width="70px">`
+                    compras.style.display = "block";
+
+                    contador++;
+                }
+
+                contador = 0;
+
+                while (contador < qtdmaca) {
+
+                    compras.innerHTML += `<img src="maca.jpg" width="70px">`
+                    compras.style.display = "block";
+
+                    contador++;
+                }
+            }
+
+        }
+    }
+</script>

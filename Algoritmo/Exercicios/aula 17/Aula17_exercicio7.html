@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exerício 7</title>
+</head>
+<body>
+    <h2>Oração pela paz</h2>
+
+    <form>
+<select id="ora">
+<option value="">-Escolha um trecho-</option>
+<option value="...que eu leve a concórdia, que eu leve o amor.">Onde houver ódio e rancor...</option>
+<option value="...que eu leve o perdão.">Onde há ofensa que dói...</option>
+<option value="...que eu leve a união e Tua paz.">Onde houver a discórdia...</option>
+<option value="...quero bem no seu coração, semear alegria, pra florir gratidão.">
+    Onde encontrar um irmão a chorar de tristeza em ter voz e nem vez...</option>
+</select>
+<br><br>
+<button type="button" onclick="x()">Revelar boa obra</button>
+
+    </form>
+    <br>
+    
+    <br>
+    <div id="trecho" style="color: green; margin:30px;"></div>
+</body>
+</html>
+<script>
+function x() {
+    trecho.innerHTML = ora.value;
+}
+
+</script>

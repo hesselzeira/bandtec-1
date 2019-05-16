@@ -1,0 +1,5 @@
+Operador lógico ou conector lógico
+
+	ex: (media>=5 && frequencia>=75
+
+	se um der ruim o todos dão errado

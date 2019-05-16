@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Método 1: <br>
+        <div id="ZN" style="color:gray" onclick="azul(ZN,ZL,ZO,ZS)">Zona Norte</div>
+        <div id="ZL" style="color: gray; "onclick="azul(ZL,ZN,ZO,ZS)">Zona Leste</div>
+        <div id="ZO" style="color: gray;"onclick="azul(ZO,ZL,ZN,ZS)">Zona Oeste</div>
+        <div id="ZS" style="color: gray;"onclick="azul(ZS,ZL,ZN,ZO)">Zona Sul</div>
+
+        Método 2: <br>
+        <div id="ZN2" style="color:gray" onclick="acender(ZN2)">Zona Norte</div>
+        <div id="ZL2" style="color: gray; "onclick="acender(ZL2)">Zona Leste</div>
+        <div id="ZO2" style="color: gray;"onclick="acender(ZO2)">Zona Oeste</div>
+        <div id="ZS2" style="color: gray;"onclick="acender(ZS2)">Zona Sul</div>
+   
+</body>
+</html>
+<script>
+    function azul(acende, apaga1, apaga2, apaga3){
+        acende.style.color = 'blue';
+        apaga1.style.color = 'gray';
+        apaga2.style.color = 'gray';
+        apaga3.style.color = 'gray';
+    }
+    function acender(a){
+        ZN2.style.color = 'gray'
+        ZL2.style.color = 'gray'
+        ZO2.style.color = 'gray'
+        ZS2.style.color = 'gray'
+        a.style.color = 'blue'
+    }
+</script>

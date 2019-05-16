@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6</title>
+</head>
+<body>
+    <form>
+        Preço da laranja: <input type="number" id="preco_laranja"><br>
+        Quantas laranjas usará: <input type="number" id="qtd_laranja"><br><br><br>
+        
+        Preco da maçã: <input type="number" id="preco_maca"><br>
+        Quantas maçãs usará: <input type="number" id="qtd_maca"><br><br><br>
+
+        Preço da banana: <input type="number" id="preco_banana"><br>
+        Quantas bananas usará: <input type="number" id="qtd_banana"><br><br><br>
+
+        <button type="button" onclick="calcular()">Calcular preço da salada de frutas</button>
+    </form>
+
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+
+        var custolaranja = Number(preco_laranja.value) * Number(qtd_laranja.value);
+        var customaca = Number(preco_maca.value) * Number(qtd_maca.value);
+        var custobanana = Number(preco_banana) * Number(qtd_banana);
+
+        var custototal = Number(custolaranja) + Number(customaca) + Number(custobanana);
+        var porcao = custototal / 10;
+
+        mensagem.innerHTML = `Sua salada custará R$${custototal} e cada porção custará R$${porcao}!`
+    }
+</script>

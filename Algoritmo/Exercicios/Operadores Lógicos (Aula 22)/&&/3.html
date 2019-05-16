@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Casal apaixonado</h2>
+        Preço do Jantar <br>
+        <input type="number" id="preco" autofocus><br><br>
+        <button type="button" onclick="verificar()">Verificar orçamento</button>
+    </form>
+    <br>
+    <div id="mensagem" style="color:#be0f0f; font-family: sans-serif; font-size: 20px"></div>
+
+</body>
+</html>
+<script>
+    var frase;
+    function verificar(){
+        if(preco.value <= 50){
+            frase = 'Opa! #partiujantar';
+        }
+
+        else if (preco.value >50 && preco.value <=80){
+            frase = 'Vamos esperar para comemorar 1 mês :D';
+        }
+
+        else if (preco.value >80 && preco.value <=120){
+            frase = 'Vamos esperar para comemorar 3 meses :)';
+        }
+
+        else if (preco.value > 120 && preco.value <= 300) {
+            frase = 'Vamos esperar para comemorar 6 meses :|';
+        }
+
+        else if (preco.value > 300){
+            frase = 'PQP, NÓIS NUM É RICO NÃO, vamo no BK mesmo hsuahsua';
+        }
+       
+        mensagem.innerHTML = frase;
+
+    }
+</script>

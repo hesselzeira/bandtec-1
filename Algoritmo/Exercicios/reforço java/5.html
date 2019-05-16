@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rute Imosa</title>
+</head>
+<body>
+    <form>
+        Nome do produto: <input type="text" id="nome"><br><br>
+        Preço de compra do produto: <input type="number" id="preco_compra"><br><br>
+        Porcentagem de impostos na venda: <input type="number" id="porc_imposto"><br><br>
+        Porcentagem de lucro: <input type="number" id="porc_lucro"><br><br>
+        <button type="button" onclick="calcular()">Calcular preço da venda</button>
+    </form>
+
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var valor = Number(porc_imposto.value) + Number(porc_lucro.value) / 100;
+        var precofinal = Number(preco_compra.value)*Number(valor);
+
+        mensagem.innerHTML = `R$${precofinal}!!`
+    }
+</script>

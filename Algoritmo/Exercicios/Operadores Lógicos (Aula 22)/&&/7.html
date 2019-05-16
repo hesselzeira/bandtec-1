@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="google.com">
+        Nickname <br>
+        <input type="text" id="nome" name="name" autofocus> <br>
+        Senha <br>
+        <input type="password" id="senha"> <br>
+        Código de acesso <br>
+        <input type="number" id="codigo"> <br>
+
+        <button type="button" onclick="logar()">Entrar</button>
+
+        <div id="mensagem"></div>
+
+    </form>
+</body>
+</html>
+<script>
+    function logar(){
+        var frase;
+        if (nome.value == 'amor' && senha.value == 'amor123' && codigo.value ==347){
+            frase = 'Usuário autenticado';
+        }
+
+        else {
+            frase = 'Falha na autenticação';
+        }
+
+        mensagem.innerHTML = frase;
+    }
+</script>

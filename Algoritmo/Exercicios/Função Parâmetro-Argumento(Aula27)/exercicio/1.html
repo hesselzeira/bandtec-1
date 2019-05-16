@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <div id="ZN" style="color:gray" onclick="azul(ZN,ZL,ZO,ZS);">Zona Norte</div>
+        <div id="ZL" style="color: gray" onclick="azul(ZL,ZN,ZO,ZS);" >Zona Leste</div>
+        <div id="ZO" style="color: gray;" onclick="azul(ZO,ZL,ZN,ZS);">Zona Oeste</div>
+        <div id="ZS" style="color: gray;"onclick="azul(ZS,ZL,ZO,ZN);">Zona Sul</div>
+   
+</body>
+</html>
+<script>
+    function azul(acende, apaga1, apaga2, apaga3){
+        
+        acende.style.color = 'blue';
+
+        apaga1.style.color = 'gray';
+        apaga2.style.color = 'gray';
+        apaga3.style.color = 'gray';
+    }
+</script>

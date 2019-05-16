@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13</title>
+</head>
+<body>
+    
+Qual o valor depositado? <br>
+<input type="number" id="deposito"> <br><br>
+
+Quantos meses esse valor ficará depositado? <br>
+<input type="number" id="meses"> <br><br>
+
+<button type="button" onclick="exibir()">Ver investimento</button>
+<br>
+
+<div id="listinha"></div>
+
+</body>
+</html>
+<script>
+    function exibir(){
+
+        var contador = 0;
+        var total = Number(deposito.value);
+        
+
+        while(contador < meses.value){
+            // 50% de 100 é 50 
+            // 150% de 1500 é 150
+            //  % significa DIVIDIR POR 100
+            // 50% = 50/100 = 0.5
+            // 150% = 150/100 = 1.5
+            total *= 1.005
+            listinha.innerHTML += `<br> ${contador+1}º mês ${total.toFixed(2)}`;
+
+            contador++;
+        }
+    }
+</script>

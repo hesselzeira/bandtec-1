@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1</title>
+</head>
+<body>
+
+    <span id="ZN" onclick="colorir(ZN)">Zona Norte</span> <br>
+    <span id="ZS" onclick="colorir(ZS)">Zona Sul</span> <br>
+    <span id="ZL" onclick="colorir(ZL)">Zona Leste</span> <br> 
+    <span id="ZO" onclick="colorir(ZO)">Zona Oeste</span> <br>
+
+</body>
+</html>
+<script>
+    function colorir(escolhido) {
+        
+        ZL.style.color = 'black';
+        ZN.style.color = 'black';
+        ZO.style.color = 'black';
+        ZS.style.color = 'black';
+
+        escolhido.style.color = 'blue';
+      };
+</script>

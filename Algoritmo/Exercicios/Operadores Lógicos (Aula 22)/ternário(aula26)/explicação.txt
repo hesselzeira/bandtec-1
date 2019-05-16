@@ -1,0 +1,10 @@
+exemplo:
+
+sua idade: 13
+
+> idade.value >= ? '#adolescente' : '#criança'
+< "#adolescente"
+
+maneira muito rápida de if else
+pode trocar isso por if else, apenas com duas opções
+

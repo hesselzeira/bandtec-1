@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Peça sua pizza aqui</title>
+</head>
+
+<body>
+    <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Peça sua pizza aqui!</h1>
+
+    <form>
+        De um nome ao sabor da sua pizza <br>
+        <input type="text" id="sabor" autofocus><br><br>
+
+        Preço: <br>
+        <input type="number" id="preco">
+        <br><br>
+        <select id="ingredientes1">
+            <option value="" id="">Ingrediente 1</option>
+            <option value="" id="">Queijo</option>
+            <option value="" id="">Presunto</option>
+            <option value="" id="">Ovo</option>
+            <option value="" id="">Palmito</option>
+            <option value="" id="">Frango</option>
+            <option value="" id="">Catupiry</option>
+            <option value="" id="">Bacon</option>
+            <option value="" id="">Azeitona</option>
+        </select>
+
+        <select id="Ingrediente2">
+            <option value="" id="">Ingrediente 2</option>
+            <option value="" id="">Queijo</option>
+            <option value="" id="">Presunto</option>
+            <option value="" id="">Ovo</option>
+            <option value="" id="">Palmito</option>
+            <option value="" id="">Frango</option>
+            <option value="" id="">Catupiry</option>
+            <option value="" id="">Bacon</option>
+            <option value="" id="">Azeitona</option>
+        </select>
+
+        <select id="Ingrediente3">
+            <option value="" id="">Ingrediente 3</option>
+            <option value="" id="">Queijo</option>
+            <option value="" id="">Presunto</option>
+            <option value="" id="">Ovo</option>
+            <option value="" id="">Palmito</option>
+            <option value="" id="">Frango</option>
+            <option value="" id="">Catupiry</option>
+            <option value="" id="">Bacon</option>
+            <option value="" id="">Azeitona</option>
+        </select>
+    
+        <div id="div_mensagem" style="color:blue;font-family:Arial, Helvetica, sans-serif; display: none;">
+                "A pizza de "<b id="u_sabor"></b>" vai custar um total de "<u id="b_preco"></u>"."
+            </div>
+
+        <button type="button" onclick="Calcular()">Calcular preço da pizza</button>
+    
+    </form>
+    
+    <br>
+    
+</body>
+</html>
+<script>
+function calcular () {
+    var resultado = preco.value + sabor;
+
+    b_sabor.innerHTML = sabor.value;
+    u_sabor.innerHTML = `R$${preco.value}`;
+    div_mensagem.style.display='inline';
+}
+
+</script>

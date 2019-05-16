@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Economiza, Walmir!</title>
+</head>
+<body>
+    <form>
+        Digite seu salário bruto aqui: <br>
+        <input type="number" id="salario" autofocus placeholder="Você ainda não digitou..."> <br><br>
+        Digite o valor total dos descontos no salário: <br>
+        <input type="number" placeholder="Você ainda não digitou..." id="desconto"> <br> <br>
+
+        Multas de trânsito  <br>
+        <select name="" id="multa"> Multas de trânsito <br>
+            <option value="">- Selecione -</option>
+            <option value="0">Nenhuma</option>
+            <option value="0.100">Leve</option>
+            <option value="0.200">Grave</option>
+            <option value="0.350">Gravíssima</option>
+        
+        </select>
+    </form>
+    <br>
+    <button type="button" onclick="Calcular()"> Calcular custo mensal</button>
+    <div id="div_mensagem" style="color: #047204"></div>
+
+</body>
+</html>
+<script>
+function Calcular(){
+var x = Number (salario.value) - (desconto.value-multa.value);
+var y = multa.value*salario.value;
+
+div_mensagem.innerHTML= `O Walmir ganha R$${salario.value} e sobra R$${x}. Ou seja, ele gasta ${y}% de seu salário.`;
+
+}
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15</title>
+</head>
+<body>
+    Quantos porcos? <br>
+    <input type="number" id="porcos"> <br>
+
+    Quantos cavalos? <br>
+    <input type="number" id="cavalos"> <br>
+    
+    Quantos bois? <br>
+    <input type="number" id="boi"> <br>
+
+    <button type="button" onclick="exibir()">Ilustrar Caminhão</button>
+
+        <div id="caminhao" style="border: solid 1px black; display: none;" ></div>
+
+
+</body>
+</html>
+<script>
+   function exibir(){
+
+        var qtdporcos = Number(porcos.value);
+        var qtdcavalo = Number(cavalo.value);
+        var qtdboi = Number(boi.value);
+
+        var pesoPorco = 100;
+        var pesoCavalo = 600;
+        var pesoBoi = 1300;
+
+        var totalPeso = (qtdporcos*pesoPorco) + (qtdcavalo*pesoCavalo) + (qtdBoi*pesoBoi);
+        var qtdTotal = qtdporcos + qtdcavalo + qtdboi;
+
+        var contador = 0;
+
+        caminhao.innerHTML = '';
+
+        if (totalPeso >= 2000){
+            alert('Limite de peso');
+        }else if (qtdTotal > 5){
+            
+        }
+        
+    }
+</script>

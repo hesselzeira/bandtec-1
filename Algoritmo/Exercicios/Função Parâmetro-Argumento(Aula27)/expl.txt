@@ -1,0 +1,20 @@
+As funções de parâmetro ou argumento, são as funções que precisam de algo dentro, algum valor
+
+O que você passa no parenteses da função
+
+A função parâmetro pode ter um ou mais valores
+
+prompt('digite seu nome', 'yoshi') (o que já vem digitado na caixinha)
+> abre no alert pré ponto
+
+funções que vem de fabrica já prontos do JavaScript
+
+
+O que é parâmetro?	
+Um instrumento que precisa para funcionar 
+
+>>
+
+8%3 - obtém o resto da divisão 
+
+para saber se o número é multiplo de outro

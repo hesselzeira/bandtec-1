@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="calcular('homem')">Entrou um Homem</button>
+    <button type="button" onclick="calcular('mulher')">Entrou uma Mulher</button>
+    <button type="button" onclick="calcular('criança')">Entrou uma Criança</button>
+
+    <br>
+    <br>
+    <div>
+        Pessoas no elevador <br>
+        <span id="qtd_homem">0</span> homens <br>
+        <span id="qtd_mulher">0</span> mulheres <br>
+        <span id="qtd_crianca">0</span> crianças <br>
+        <br>
+        Peso total: <span id="peso_total_div">0</span>kg
+    </div>
+</body>
+</html>
+<script>
+    var homem = 0;
+    var mulher = 0;
+    var crianca = 0;
+
+    function calcular(quem){
+        var peso_homem = 90;
+        var peso_mulher = 75;
+        var peso_crianca = 40;
+
+        if(quem == 'mulher'){
+            mulher++;
+            qtd_mulher.innerHTML = mulher;
+        }
+
+        else if(quem == 'homem'){
+            homem++;
+            qtd_homem.innerHTML = homem;
+        }
+        
+        else if(quem == 'criança'){
+            crianca++;
+            qtd_crianca.innerHTML = crianca;
+        }
+
+        var peso_total = (homem*peso_homem) + (mulher*peso_mulher) + (crianca*peso_crianca);
+        peso_total_div.innerHTML = peso_total;
+    }
+
+
+</script>

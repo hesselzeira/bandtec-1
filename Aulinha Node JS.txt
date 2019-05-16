@@ -1,0 +1,38 @@
+Tudo hoje em dia tem Node JS
+
+vai lá em interpreta
+
+>> Nuvem: computador dos outros 
+	infrainstrutura parruda - 
+
+>> Servidor lógico: programa
+	Servidor HTTP (onde os sites que acessamos, como globo.com e etc)
+	HTTPS - que tem os dados embaralhados 
+	FTP - 
+	SSH -
+	UDP -
+
+	os sites são padronizados com http por isso não precisamos digitar
+
+>> Servidor físico: 
+	
+	Servidor de impressão (um programa instalado no servidor físico) - com objetivo de receber impressão de vários computadores
+	
+	Servidor de email - 
+
+
+Todo servidor lógico tem algo em comum, pois todos são capazes de fazer "escuta"
+Escuta - termo usado na computação para quando o servidor espera o serviço de alguém. Ele fica em Loop infinito
+
+>> Virtualização: um computador potente que pode simular maquinas dentro delas, e alugar no caso
+
+
+Sobre o servidor HTTP:
+	
+	TCP - que permite que a placa de rede (dispositivo que nos dá acesso a internet) se divida em portas, porque em tese poderiamos apenas fazer apenas uma coisa ao mesmo tempo
+
+>> Gerenciamento de Dependencias - Adicionar Bibliotecas ou pacotes
+
+Analogia do que é biblioteca: can you pilotar that helicopter
+
+NPM - Gerenciador de dependencia do NodeJS 

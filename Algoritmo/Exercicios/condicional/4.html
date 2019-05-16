@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estágio</title>
+</head>
+<body>
+    <form>
+        Nota continuada 
+        <input type="number" id="cont"> <br><br>
+        Nota integrada
+        <input type="number" id="int"> <br><br>
+        <button type="button" onclick="media()">Calcular Média</button>
+    </form>
+
+    <div id="a" style="color:green;"></div>
+    <div id="b" style="color:indigo;"></div>
+</body>
+</html>
+<script>
+    function media () {
+        var x = (Number(cont.value) + Number(int.value))/2;
+
+        if (x>5) {
+            a.innerHTML = '#PartiuEstágio';
+            b.style.display='none';
+            a.style.display='inline';
+        }
+        else {
+            b.innerHTML = '#TenteOutraVez';
+            a.style.display='none';
+            b.style.display='inline';
+        }
+    }
+</script>

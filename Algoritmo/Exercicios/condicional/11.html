@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Status x Salário</h1>
+        Qual o seu salário atual? <br>
+        <input type="number" id="salario"><br><br>
+
+        <button type="button" onclick="exibir_frase()">Status social</button>
+    </form>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    var frase
+    function exibir_frase(){
+        if (salario.value < 1000) {
+            frase = '#AindaTenhoQueRalarMuito';
+            
+                if (salario.value < 200) {
+                frase = `${frase} <br> #PrecisoDeAjuda`;
+        }
+        }
+        else {
+            frase = '#EstouMenosPobre';
+            
+            if (salario.value > 2500){
+            frase = `${frase} <br> #Ostentação`;
+            }
+
+                if (salario.value > 5000){
+                    frase = `${frase} <br> #AmigoDoNeymar`;
+                }
+        }
+
+
+        
+            mensagem.innerHTML = frase;
+
+    }
+</script>

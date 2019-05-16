@@ -1,0 +1,29 @@
+>>> Laços de Repetição 
+
+	Um exemplo com um alert com a frase 'I S2 algoritmo'
+	e botão repetir.
+
+
+>> Estrutura de Repetição/Loop
+	
+	Uma técnica de programação que toda linguagem tem para repetir
+	é bem mais comum na computação que a "não repetição."
+
+>> Estrutura WHILE
+
+	While significa "enquanto"
+
+	Ex: Enquanto o professor não chegar, a aula não começa
+
+	O mesmo enquanto do mundo real, existe na programação que basicamente
+	repete o código enquanto a condição for verdadeira.
+
+			++ - soma 1 ao valor da variável
+
+				Expressão Booleana - só uma opção. Verdadeiro ou falso.
+
+While - Um if que se repete
+
+parecido com if, porém se fosse o if após a excecução da função. 
+Já o while, no final ele volta para o início se repete, excecuta várias vezes. 	
+

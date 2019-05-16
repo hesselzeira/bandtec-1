@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17</title>
+</head>
+<body>
+
+    <button type="button" onclick="exibir()" style="padding: 100px">CLICA EM MIM *--*</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    function exibir(){
+
+        mensagem.innerHTML = ''
+
+        for(contador=40; contador>=0; contador--){
+
+            //o if tem prioridade então nesse caso ele ignorou as 
+            // outras condições já que a primeira é verdadeira 
+
+            if(contador==0){
+                mensagem.innerHTML+= `<br>${contador}`
+            }
+
+
+            else if(contador%2!=0) {
+                mensagem.innerHTML+= `<span style= "color: red"> <br>${contador}</span>`    
+            }
+
+            else{
+                mensagem.innerHTML+= `<span style= "color: green"> <br>${contador}</span>`
+            }
+        }
+    }
+</script>

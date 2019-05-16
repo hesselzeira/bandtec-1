@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analise de Vida</title>
+</head>
+<body>
+    <form>
+        Qual a sua idade <br>
+        <input type="number" id="idade"><br><br>
+
+        Quantos filhos você tem? <br>
+        <input type="number" id="filhos"><br><br>
+
+        <button type="button" onclick="analisar_vida()">Analisar vida :)</button>
+    </form>
+
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    var frase;
+    function analisar_vida(){
+
+        if (idade.value < 14){
+        frase = 'Você é praticamente uma criança :3';
+        } 
+
+        else if (idade.value < 18){
+
+            frase = 'Você é dimenó';
+
+            if (filhos.value > 0) {
+                frase =  'Nossa, começou cedo, hein :O';
+            }
+        }
+
+        else if (idade.value >= 18) {
+                frase = 'Você é dimaió';
+
+                if (filhos.value > 0) {
+                    frase = `${frase} <br> Parabéns pelos filhos!`;
+                }
+
+                else (
+                    frase = `${frase} <br> `
+                )
+            }
+
+        mensagem.innerHTML = frase;
+    }
+
+</script>

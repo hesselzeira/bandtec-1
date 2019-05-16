@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Um filme que você gosta muito: <br><br>
+        <input type="text" id="filme_cadastrado">
+        <br>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+
+        <div id="mensagem"></div>
+
+        <div id="div_pesquisa"></div>
+
+        <br><br>
+
+        Pesquisa por filme: <br>
+        <input type="text" id="pesquisa"> <br>
+        <button type="button" onclick="pesquisar()">Pesquisar</button>
+
+    </form>
+</body>
+
+</html>
+<script>
+
+    var filme = [];
+
+    function cadastrar() {
+        filme.push(filme_cadastrado.value);
+
+        mensagem.innerHTML = '';
+        for (indice = 0; indice < filme.length; indice++) {
+            mensagem.innerHTML += `${filme[indice]} <br>`;
+        }
+    }
+
+    function pesquisar() {
+        var achou = 0;
+
+        for (indice = 0; indice < filme.length; indice++) {
+            if (pesquisa.value == filme[indice]) {
+                achou++;
+            }
+        }
+
+        if (achou > 0) {
+            div_pesquisa.innerHTML = 'Você gosta desse filme';
+        } else {
+            div_pesquisa.innerHTML = 'Você não curte esse filme';
+        }
+
+    }
+</script>

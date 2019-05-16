@@ -1,0 +1,40 @@
+- Atributo atômico ou primitivo ou simples vs. atributo composto
+	
+	-> Atributo Simples
+
+		Não possui qualquer característica especial, recebe valor único como
+		nome e etc. A maioria dos atributos são considerados simples.
+
+	-> Atributo Composto
+	
+		Seu conteúdo é formado por vários itens menores, como por exemplo um endereço, 
+		que pode ser divido em mais atributos: rua, número, CEP, bairro, etc...
+
+- Atributo monovalorado vs multivalorado
+
+	-> Atributo Monovalorado
+	
+		Possuí um único valor para a entidade. ex: idade. :)
+
+	-> Atributo Multivalorado
+		
+		Seu conteúdo é formado por mais de um valor. ex: telefone 
+		Esse tipo de atributo é aceito conceitualmente porém é um grande problema 
+		para um banco de dados.
+		
+	
+
+- Atributo derivado 
+
+	Pode ser determinado através de outros atributos ou através de entidades relacionadas.
+	Ex: idade = data atual - data de nascimento ou nº de empregados = soma dos empregados
+
+	Uber quando uma pessoa usa a conta debitada e paga a fatura com as somas das corridas no 
+	final do mês.
+
+- Atributo identificador ou determinante
+
+	Identifica de forma única uma entidade, ou seja, não pode haver dados repetidos
+	Exemplo: CNPJ, CPF, Código do fornecedor, Número da matrícula, etc.
+
+	Como boa prática, utilize a chave primária com dados gerados internamente :)

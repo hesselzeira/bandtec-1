@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preferência</title>
+</head>
+<body>
+    <form>
+        O quanto você gosta de frutas? <br>
+        <input type="number" id="fruta"> <br><br>
+        O quanto você gosta de fastfood? <br>
+        <input type="number" id="fastfood"> <br>
+        <button type="button" onclick="avaliar()"> Avaliar sua preferência</button>
+    </form>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    function avaliar(){
+         var frase;
+
+        if (fruta.value == fastfood.value) {
+            frase = 'Você gosta tanto de frutas quanto de fastfood';
+        }
+
+        else if (fruta.value < fastfood.value) {
+            frase = 'Você gosta mais de fastfood';
+        }
+
+        else {
+            frase = 'Você gosta mais de fruta';
+        }
+        
+        mensagem.innerHTML = frase;
+    
+    }
+</script>

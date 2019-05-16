@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Salário x Status</h2>
+
+    <form>
+        <input type="number" id="salario" 
+        placeholder="Qual seu salário?">
+        <button type="button" onclick="validar_status()">
+            Status Social
+        </button>
+    </form>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+function validar_status() {
+    var frase;
+
+    if (salario.value < 1000) { // salário menor que 1000
+        frase = '#aindatenhoqueralarmuito';
+        if (salario.value < 200) { // salário menor que 200
+            frase = `${frase} <br> #precisodeajuda`
+        }
+    } 
+    else { // salário maior ou igual a 1000
+        frase = '#estoumenospobre';
+        if (salario.value > 2500) { // salário maior que 2500
+            frase = `${frase} <br> #ostentação`
+        }
+        if (salario.value > 5000) { // salário maior que 5000
+            frase = `${frase} <br> #amigodoneymar`
+        }
+    }     
+    div_resultado.innerHTML = frase;
+}
+</script>

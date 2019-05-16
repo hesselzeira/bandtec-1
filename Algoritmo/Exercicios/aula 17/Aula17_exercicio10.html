@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="color:#ffd000; font-family: Verdana, Geneva, Tahoma, sans-serif;">Desconto do INSS</h1>
+
+    <input type="text" id="nome" placeholder="Digite seu nome..."><br><br>
+    Digite seu salário bruto <br> <input type="number" id="number"><br><br>
+    <select id="salario">
+<option value="">Faixa salárial para p/ INSS</option>
+<option value="0.0">0 à R$ 1.000</option>
+<option value="0.10">R$ 1.000 à R$ 3,000</option>
+<option value="0.20">Mais de R$ 3.000</option>
+
+    </select>
+    <br><br>
+    <button type="button" onclick="calcular()">Calcular Desconto</button>
+
+    <div id="texto" style="color: #09098a; margin: 10px; font-family:Verdana, Geneva, Tahoma, sans-serif;"></div>
+</body>
+</html>
+<script>
+function calcular() {
+    var x = number.value*salario.value;
+    var y = salario.value - x;
+
+    texto.innerHTML = `Olá, ${nome.value}. Seu desconto INSS será de ${x}. Assim, seu salário líquido será de R$ ${y}`; 
+}
+
+</script>

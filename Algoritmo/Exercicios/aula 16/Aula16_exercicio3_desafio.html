@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcular vida:</title>
+</head>
+
+<body>
+    <h1>Saiba quanto tempo você já viveu!</h1>
+
+    Idade em anos <br> <input type="number" id="idade">
+    <button type="button" onclick="calcular_vida()">Calcular vida!</button>
+</body>
+</html>
+
+<script>
+ function calcular_vida () {
+    var total_dias = 365 * idade.value;
+    var total_meses= 12 * idade.value;
+
+    alert (`Você já viveu ${(total_dias)} dias e ${total_meses} meses!`);
+ }
+ 
+
+</script>

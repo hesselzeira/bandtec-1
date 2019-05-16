@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Nome do produto:
+        <input type="text" id="nome"><br><br>
+        Preço de compra do produto:
+        <input type="number" id="preco"><br><br>
+        <button type="button" onclick="calcular()">Calcular preço de venda</button>
+    </form>
+
+    <div id="mensagem" style="font-size: 20px; color:orangered; font-family:'Franklin Gothic Medium', 
+    'Arial Narrow', Arial, sans-serif; margin-top: 12px;"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var lucro = preco.value* 0.5 + Number(preco.value);
+
+        mensagem.innerHTML = `O produto ${nome.value} deve ser vendido por R$${lucro};`
+    }
+</script>

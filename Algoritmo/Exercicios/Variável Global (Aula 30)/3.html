@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Escolha o Pou mais fofo (clique na foto): 
+    <br>
+
+    <img src="cid.jpg" alt="indiano" width="300px" onclick="escolha('cid')">
+    <img src="hessel.jpeg" alt="moça bonita" width="300px" onclick="escolha('hessel')">
+
+    <div >Votos Cidade: <span id="foto_cidade">0</span></div>
+    <div>Votos Hessel: <span id="foto_hessel">0</span></div>
+
+    <button type="button" onclick="finalizar()">Finalizar função</button>
+
+</body>
+</html>
+<script>
+    var cidade = 0;
+    var hessel = 0;
+
+    function escolha(quem){
+        if(quem == 'cid'){
+        cidade++;
+
+        }
+        
+        else{
+            hessel++;
+        }
+
+        foto_cidade.innerHTML= cidade;
+        foto_hessel.innerHTML = hessel;
+    }
+
+    function finalizar(){
+        if (cidade > hessel){
+            alert('Cidade Venceu!')
+        }
+
+        else if(hessel > cidade){
+            alert('Hessel Venceu!')
+        }
+
+            
+    }
+    
+</script>

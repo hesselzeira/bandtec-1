@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Início</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+    <!-- nav é a tag de navegação ou barra de navegação -->
+    <nav>
+        <div class="titulo"> My Music</div>
+
+        <div class="botao-nav">
+            <a href="index.html" class="ativa">Novas Músicas</a>
+        </div>
+
+        <div class="botao-nav">
+            <a href="biblioteca.html">Biblioteca</a>
+        </div>
+
+    </nav>
+
+    <!-- header é o cabeçalho -->
+    <header>
+
+        <h1>My Music</h1>
+        <h2>Bem vindo à sua biblioteca musical! <br> Gerencie suas músicas, organize seus gostos.</h2>
+
+        <!-- é igual o botão porém ele é apenas para navegação e não necessita da tag <button></button> -->
+        <a class="boto" href="biblioteca.html">Visualizar sua biblioteca</a>
+
+    </header>
+
+    <!-- o main é o assunto principal do site -->
+    <main>
+
+
+        <form class="form-add-music" action="">
+
+            <p>Cadastre <b> novas músicas que serão adicionadas em sua biblioteca </b> de gerenciamento musical :)</p>
+
+            <div class='form-container'>
+                <div class="col-12">
+                    <label for="titulo">Título da música</label>
+                    <input type="text" id="titulo">
+                </div>
+
+                <div class = "col-9">
+                    <label for="artista">Artista</label>
+                    <input type="text" id="artista">
+                </div>
+
+                <div class="col-3">
+                    <label for="genero">Gênero</label>
+                    <input type="text" id="genero">
+                </div>
+
+                <div class="col-9" >
+                    <label for="album">Albúm</label>
+                    <input type="text" id="album">
+                </div>
+
+                <div class="col-3">
+                    <label for="ano">Ano</label>
+                    <input type="number" id="ano">
+                </div>
+            </div>
+
+            <button class="boto w-50 text-center" type="button">Cadastrar Música</button>
+
+        </form>
+    </main>
+
+    <!-- footer é o roda pé  -->
+    <footer>BY HESSEL</footer>
+
+</body>
+
+</html>

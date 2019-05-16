@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3</title>
+</head>
+<body>
+    <h2>Insira nos campos abaixo</h2>
+
+    Idade do pai: <br>
+    <input type="number" id="pai"> <br>
+
+    Idade da mãe: <br>
+    <input type="number" id="mae"> <br>
+
+    <button type="button" style="margin: 10px 0" onclick="verificar()">Verificar Aposentadoria</button>
+
+    <div id="mensagem" style="display: none; ">
+        Faltam <span id="pp"></span> anos para o pai se aposentar. <br>
+        Faltam <span id="mm"></span> anos para a mãe se aposentar. <br>  
+    </div>
+
+</body>
+</html>
+<script>
+    function verificar(){
+
+        var aposentadoria_pai = 65 - Number(pai.value);
+        var aposentadoria_mae = 60 - Number(mae.value);
+
+        mensagem.style.display = "block";
+
+        pp.innerHTML = aposentadoria_pai;
+        mm.innerHTML = aposentadoria_mae;
+    }
+</script>

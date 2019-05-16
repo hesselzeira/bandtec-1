@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notas</title>
+</head>
+<body>
+    <form>
+<h1>calcule sua média</h1>
+        <input type="text" id="nome" placeholder="Digite o seu nome..."><br>
+        <input type="number" id="nota1" placeholder="Nota continuada..."><br>
+        <input type="number" id="nota2" placeholder="Nota integrada..."><br><br>
+        <button type="button" onclick="calcular_media()">Calcular nota final</button> <br>
+        <button type="button" onclick="limpar()">Limpar</button>
+    </form>
+<br>
+    <div id="mensagem" style="color:green">
+
+    </div>
+</body>
+</html>
+<script>
+function calcular_media () {
+    var media = (Number(nota1.value)*0.4)+(Number(nota2.value)*0.6);
+    
+    mensagem.innerHTML = `Olá ${nome.value}, sua nota será de ${media}.`;
+}
+
+function limpar(){
+    nome.value = "";
+    nota1.value = "";
+    nota2.value= "";
+    mensagem.innerHTML = "";
+}
+</script>

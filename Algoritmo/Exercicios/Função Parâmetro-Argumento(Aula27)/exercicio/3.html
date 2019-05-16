@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Idade do pai: <input type="number" id="pai"><br>
+        Idade da mãe: <input type="number" id="mae">
+        <br><br>
+
+            <button type="button" onclick="verificar_aposentadora()">
+            Verificar aposentadoria</button>
+            
+            <div id="div_pai"></div>
+            <div id="div_mae"></div>
+            
+    </form>
+</body>
+</html>
+<script>
+    function verificar_aposentadora(){
+
+        var valpai = Number(pai.value);
+        var calcupai= 65 - valpai;
+
+        var valmae = Number(mae.value);
+        var calcumae= 60 - valmae;
+
+        // div_pai.innerHTML = `Faltam ${calcupai} anos para o pai se aposentar!`;
+        mostrar_mensagem('pai', calcupai, div_pai)
+        mostrar_mensagem('mae', calcumae, div_mae)
+
+    }
+
+    function mostrar_mensagem(parente, valor, div){
+        div.innerHTML = `Faltam ${valor} anos para a ${parente} se aposentar!`;
+    }
+</script>

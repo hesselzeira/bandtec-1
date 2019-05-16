@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Insira a quantidade de alunos que tiraram...</h2>
+    <form>
+        0: <input type="number" id="zero"> <br><br>
+        3,5: <input type="number" id="tres_meio"><br><br>
+        5,0: <input type="number" id="cinco"><br><br>
+        7,5: <input type="number" id="sete_meio"><br><br>
+        10: <input type="number" id="dez"><br><br>
+
+        <button type="button" onclick="calcular()">Analisar</button>
+
+    </form>
+             <div id="mensagem"style="color:#be0f0f; font-family: sans-serif; font-size: 20px"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        var frase;
+        var total = Number(zero.value) + Number(tres_meio.value) + Number(cinco.value) + 
+                    Number(sete_meio.value) + Number (dez.value);
+
+        if (total != 40){
+            frase = 'Só podem haver 40 alunos.';
+        }
+
+        else{
+           if (dez.value >= 0 && dez.value <=3){
+                frase = 'Poucos alunos fora da curva';
+            }
+            
+            else if (dez.value >3 && dez.value <= 8){
+                frase = 'Alguns alunos fora da curva';
+            }
+
+            else if (dez.value>8 && dez.value <=15){
+                frase = 'Bastante alunos fora da curva';
+            }
+
+            else{
+                frase = 'Turma da curva';
+            }
+        }
+
+        mensagem.innerHTML = frase;
+    }
+</script>

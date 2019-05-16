@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>2</title>
+</head>
+<body>
+    Informe seu salário: <br><br>
+    <input type='number' id='salario'> <br><br>
+    <button type='button' onclick='exibir()'>Exibir descontos</button>
+
+        <div id='mensagem' style="display: none">
+                Desconto de INSS: R$ <span id='x'></span> <br>
+                Desconto de Imposto de Renda: R$ <span id='y'></span> <br>
+                Desconto de VT: R$ <span id='z'></span>
+        </div>
+
+</body>
+</html>
+<script>
+    function exibir(){
+        inss();
+        imposto_renda();
+        vt();
+    }
+
+    function inss(){
+        var desconto_inss = Number(salario.value) * 0.1;
+        x.innerHTML = desconto_inss;
+        mensagem.style.display = "block";
+    }
+    
+    function imposto_renda(){
+        var desconto_imposto_renda = Number(salario.value) * 0.15;
+        y.innerHTML = desconto_imposto_renda;
+        mensagem.style.display = "block";
+        
+    }
+    
+    function vt(){
+        var desconto_vt = Number(salario.value) * 0.06;
+        z.innerHTML = desconto_vt;
+        mensagem.style.display = "block";
+    }
+
+
+</script>

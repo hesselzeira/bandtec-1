@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <form>
+        <h2>Digite aqui a sua idade</h2>
+        <input type="number" id="idade"><br>
+        <button type="button" onclick="A()">Testar Acesso</button>
+    </form>
+
+    <div id="diva"></div>
+</body>
+</html>
+<script>
+    function A() {
+        if (idade.value >=18) {
+            diva.innerHTML = 'Você já pode entrar na balada';
+        }
+
+        else {
+            diva.innerHTML = '#PartiuJogarPlayStation';
+        }
+    }
+</script>

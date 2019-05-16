@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4 elementos</title>
+</head>
+<body>
+        <img src="" alt="" id="imagemlinda" height="300px;">
+
+        <br><br><br>
+
+    <select id="elementos" onchange="selecionar_elementos(elementos.value)">
+        <option value="fire.jpg">Fire</option>
+        <option value="water.jpg">Water</option>
+        <option value="wind.jpg">Wind</option>
+        <option value="terra.jpg">Terra</option>
+    
+    </select>
+
+</body>
+</html>
+<script>
+    function selecionar_elementos(endereco_imagem){
+       
+        imagemlinda.src= endereco_imagem;
+    }
+</script>

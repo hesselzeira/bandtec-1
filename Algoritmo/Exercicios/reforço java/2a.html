@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nota saúde</title>
+</head>
+<body>
+    <h1>Sua alimentação</h1>
+    
+    <form>
+        Qual seu nome?
+        <input type="text" id="nome"><br><br>
+        Que nota você dá para sua alimentação?
+        <input type="number" id="nota_a"><br><br>
+        Qual sua nota de seus hábitos de exercícios?
+        <input type="number" id="nota_e"><br><br>
+        <button type="button" onclick="calcular()">Calcular saúde</button>
+    </form>
+
+    <div id="mens" style=" font-family: cursive; font-size: 30px; color:crimson;"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var ali = nota_a.value*0.8;
+        var exer = nota_e.value*0.2;
+        var nota = Number (ali) + Number (exer);
+
+    mens.innerHTML = `Olá ${nome.value}! Sua saúde é nota ${nota}!;`
+    }
+</script>

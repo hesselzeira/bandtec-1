@@ -1,0 +1,10 @@
+npm install express-generator -g
+
+express --no-view --git meusite
+
+cd meusite
+
+npm install
+
+DEBUG=meusite:* npm start
+

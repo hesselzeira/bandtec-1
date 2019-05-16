@@ -1,0 +1,3 @@
+ou é ou não é, não tem como ter meia transação
+
+drop foreign key (nome da constraint) 

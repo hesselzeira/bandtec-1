@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Que nota dá para o atendimento? 
+        <input type="number" id="nota">
+        <br><br>
+        <button type="button" onclick="avaliar()">
+                Salvar avaliação</button>
+            <br>
+
+        <div id="div_resultado"></div>
+    </form>
+</body>
+</html>
+<script>
+
+function avaliar() {
+    
+    if (nota.value < 0) {
+        div_resultado.style.color = 'maroon';
+        div_resultado.innerHTML = 'Não existe avaliação menor que 0!';
+    } else { // aqui a nota, com certeza, é 0 ou mais
+        if (nota.value > 5) {
+            div_resultado.style.color = 'maroon';
+            div_resultado.innerHTML = 'Não existe avaliação maior que 5!';
+        } else { // aqui a nota, com certeza, é entre 0 e 5
+            if (nota.value <= 2) {
+                div_resultado.style.color = 'red';
+                div_resultado.innerHTML = 'Sua avaliação foi negativa';
+            }
+            if (nota.value == 3) {
+                div_resultado.style.color = 'gray';
+                div_resultado.innerHTML = 'Sua avaliação foi neutra';
+            }
+            if (nota.value >= 4) {
+                div_resultado.style.color = 'blue';
+                div_resultado.innerHTML = 'Sua avaliação foi positiva';
+                alert('Só queria confirmar meus parabéns!');
+            } 
+        }   
+    }  
+
+}
+
+</script>

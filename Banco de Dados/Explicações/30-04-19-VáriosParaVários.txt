@@ -1,0 +1,5 @@
+O Modelo do Peter Chein ensinados em aula podemos chama-la de uma modelagem old school
+
+A anotação do James Martin, academicamente falando podemos falar que essa modelagem é um modelo
+lógico, só que ficou mais padronizado no mercado é a de Martin pois eles já pulam para essa e é 
+considerado como 'conceitual'

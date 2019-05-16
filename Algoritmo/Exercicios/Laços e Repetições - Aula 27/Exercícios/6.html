@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button style="padding:50px" onclick="amo34()">Eu amo o 3 e 4</button>
+
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function amo34() {
+        var contador = 0;
+        mensagem.innerHTML = '';
+
+        while (contador < 30) {
+
+            contador++;
+
+            if (contador %3 == 0) {
+                mensagem.innerHTML += `Eu amo o 3! <br>`;
+            }
+
+            if (contador %4 == 0) {
+                mensagem.innerHTML += `4 são 2 pares <br>`;
+            }
+
+            if (contador%3 != 0 && contador %4 !=0){
+                mensagem.innerHTML += `${contador} <br>`;
+            }
+
+          
+        }
+
+
+    };
+
+
+</script>

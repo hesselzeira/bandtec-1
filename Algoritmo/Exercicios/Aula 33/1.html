@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Um filme que você gosta muito: <input type="text" id="filme_cadastrado">
+        <br>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+        
+        <div id="mensagem"></div>
+
+    </form>
+</body>
+
+</html>
+<script>
+
+    var filme = [];
+
+
+    function cadastrar() {
+        filme.push(filme_cadastrado.value);
+
+    mensagem.innerHTML = '';
+        for (indice = 0; indice < filme.length; indice++) {
+            mensagem.innerHTML += `${filme[indice]} <br>`;
+        }
+    }
+</script>

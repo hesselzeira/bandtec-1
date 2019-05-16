@@ -1,0 +1,11 @@
+int primary key - int significa "número inteiro" 
+
+char (30) - espaço de caracteres que se não completar os 30, fica em branco
+varchar (30) - ele não se completa se não tiver 30 caracteres 
+
+para executar mais fácil com o cursor em cima da tarefa e dar "ctrl+enter"
+
+  select * from Aluno where nome = 'William Marques' - comando pra filtrar
+
+% - Qualquer caractere que complemente 
+<> - sinal que representa direfente 

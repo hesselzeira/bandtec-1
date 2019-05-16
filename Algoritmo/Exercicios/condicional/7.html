@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conversão em dólar</title>
+</head>
+<body>
+    <h2>Conversão</h2>
+
+    <form>
+        Valor em R$ <input type="number" id="real"> <br><br>
+        Cotação do dólar (em R$) <input type="number" id="dolar"><br><br>
+
+        <button type="button" onclick="conversao()">Converter e alaviar</button>
+    </form>
+
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function conversao () {
+        var cota = real.value*dolar.value;
+        var frase;
+        if (cota <1099.99) {
+            frase = 'Você tem <b>poucos</b> dólares, otário. Vota o bozonaso e vai pra disney agora :D';
+        }
+
+        else {
+            frase = 'Você tem muitos dólares, seu burgues safado :D';
+        }
+
+    mensagem.innerHTML = frase;
+    }
+</script>

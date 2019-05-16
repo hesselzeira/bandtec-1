@@ -1,0 +1,27 @@
+entidade - relação ou tabela
+ocorrencia - tupla ou linha ou registro
+atributo - campo ou coluna 
+
+>> DICIONÁRIO DE DADOS 
+
+- Documentação de todas as entidades do projeto
+- Discrição detalhada
+- Contém os metadados do projeto 
+
+- Auxilia no planejamento e criação das tabelas
+
+Para cada entidade:
+- nome
+- discrição
+- nome da tabela correspondente
+- volume de dados esperado: quantos dados vc vai armazenar
+- tempo de retenção: por quanto tempo vc vai guardar
+- Rotina de limpeza: como será feito o processo de limpeza
+
+- para cada atributo:
+
+	nome 
+	tamanho
+(alfanumérico = texto)
+
+

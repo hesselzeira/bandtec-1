@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2</title>
+</head>
+<body>
+        Quantas vezes você quer exiba sua frase?<br>
+        <input type="number" id="exibicao"><br><br>
+        Digite sua frase:
+        <br>
+        <input type="text" id="textinho"><br><br>
+        <button type="button" onclick="exibir()">Exibir</button>
+
+       
+</body>
+</html>
+<script>
+    function exibir(){
+        
+        var contador = 0;
+
+        while (contador < exibicao.value){
+            alert(`${textinho.value}`);
+            contador++;
+        }
+    }
+</script>

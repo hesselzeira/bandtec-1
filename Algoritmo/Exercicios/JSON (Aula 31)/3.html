@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    medalha de ouro: <input type="number" id="ouro"><br>
+    medalha de prata: <input type="number" id="prata"><br>
+    medalha de bronze: <input type="number" id="bronze"><br> 
+
+    <button type="button" onclick="analisar()">Analisar medalhas</button> 
+    
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function analisar(){
+        
+        var pontuacao_medalhas = {ouro: 10000, prata: 100, bronze:1}
+
+        var pais = {
+            ouro: ouro.value,
+            prata: prata.value,
+            bronze: bronze.value
+        }
+
+        var pontuacao_total = (pontuacao_medalhas.ouro*pais.ouro) + 
+                                (pontuacao_medalhas.prata*pais.prata) +
+                                (pontuacao_medalhas.bronze * pais.bronze);
+
+    mensagem.innerHTML = `o país tem ${pontuacao_total} pontos até agora.`
+
+        
+
+    }
+</script>

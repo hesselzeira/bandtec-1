@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Obtendo valores de select (combobox)</h2>
+
+    <form>
+        time <select id="times">
+            <option value="">-Time-</option>
+            <option value="impressorão">Corinthians</option>
+            <option value="torcida idosa">Santos</option>
+            <option value="sem mundial">Palmeras</option>
+            <option value="bichas pocs">São Paulo</option>
+        </select>
+        <br><br>
+<button type="button" onclick="zoeira()">Releve a zoeira</button>
+    </form>
+<br>
+    <div id="ta" style="color:indigo"></div>
+</body>
+</html>
+<script> function zoeira () {
+    ta.innerHTML = `${times.value}`;
+
+}
+
+</script>

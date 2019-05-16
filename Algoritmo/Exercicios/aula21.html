@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Tempetatura em ºC
+        <input type="number" id="temperatura" autofocus><br><br>
+
+        <button type="button" onclick="analisar_clima()"> Analisar clima </button>
+
+        <div id="resultado"></div>
+    </form>
+</body>
+</html>
+<script>
+    function analisar_clima(){
+        var frase;
+        if(temperatura.value < 20) {
+            frase= 'Frio desconfortável D:';
+        }
+
+        else if (temperatura.value > 28){
+            frase = 'Calor desconfortável :(';
+        }
+
+        else {
+            frase = 'Temperatura agradavel :)';
+        }
+
+        mensagem.innerHTML = frase;
+    }
+</script>

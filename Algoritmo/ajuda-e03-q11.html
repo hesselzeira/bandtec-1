@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        Sabor: <input type="text" id="sabor"> 
+        <br><br>
+        Preço: <input type="number" id="preco">
+        <br><br>
+        <button type="button" onclick="calcular()">
+        Calcula preço pizza</button>
+    </form>
+    
+    <div id="div_mensagem" style="color: blue; display: none">
+        A pizza de <b id="b_sabor"></b> 
+        vai custar um total de <u id="u_preco"></u>.
+    </div>
+
+</body>
+</html>
+<script>
+function calcular() {
+    // preenchendo a tag de negrito
+    b_sabor.innerHTML = sabor.value;
+
+    // preenchendo a tag de sublinhado
+    u_preco.innerHTML = `R$${preco.value}`;
+
+    // tornando a div visível
+    div_mensagem.style.display='inline';
+}
+</script>
+
+

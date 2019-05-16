@@ -1,0 +1,1 @@
+Tabela de relacionamento serve quando os atributos são muitos para muitos 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10</title>
+</head>
+<body>
+    <form>
+        <h2>Informe a quantidade de pessoas dentro do elevador</h2>
+
+        Número de mulheres: <br>
+        <input type="number" id="woman"> <br>
+        
+        Número de homens: <br>
+        <input type="number" id="man"> <br>
+        
+        Número de crianças: <br>
+        <input type="number" id="baby"> <br><br>
+        <button type="button" onclick="exibir()">Illustrar elevador</button>
+    </form>
+
+    <br>
+
+        <div id="elevador" style="border: solid 5px gray; width: auto"></div>
+
+        
+    </body>
+    </html>
+    <script>
+    function exibir(){
+        var qtdWoman = Number(woman.value);
+        var qtdMan = Number(man.value);
+        var qtdBaby = Number(baby.value);
+
+        var contador= 0;
+
+        elevador.innerHTML = '';
+
+        while(contador < qtdWoman){
+            
+            elevador.innerHTML += `<img src="woman.png" width="70px">`;
+            contador++;
+        }
+
+        contador = 0;
+
+        while (contador < qtdMan){
+
+            elevador.innerHTML+= `<img src="man.png" width="70px">`;
+            contador++;
+    
+
+        }
+
+        contador = 0;
+
+        while (contador < qtdBaby){
+
+            elevador.innerHTML+= `<img src="baby.png" width="70px">`;
+            contador++;
+
+        }
+        
+    }
+</script>
