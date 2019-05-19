@@ -5,14 +5,14 @@ atributo - campo ou coluna
 >> DICIONÁRIO DE DADOS 
 
 - Documentação de todas as entidades do projeto
-- Discrição detalhada
+- Descrição detalhada
 - Contém os metadados do projeto 
 
 - Auxilia no planejamento e criação das tabelas
 
 Para cada entidade:
 - nome
-- discrição
+- descrição
 - nome da tabela correspondente
 - volume de dados esperado: quantos dados vc vai armazenar
 - tempo de retenção: por quanto tempo vc vai guardar
