@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CEP</title>
+</head>
+<body>
+    <form>
+
+        Insira sem CEP <br>
+        <input type="texto" id="cep_usuario"> <br>
+        Endereço <br>
+        <input type="text" id="endereco_usuario"> <br>
+        Apelido <br>
+        <input type="text" id="apelido_usuario" placeholder="ex:'casa' "> <br>
+        <button type="button" onclick="cadastrar()">Cadastrar CEP</button>
+        
+    </form>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+
+    var enderecos_cadastrados = []
+
+function cadastrar(){
+    
+    var endereco = {
+        cep: cep_usuario.value,
+        endereco: endereco_usuario.value,
+        apelido: apelido_usuario.value
+    }
+
+    enderecos_cadastrados.push(endereco)
+    // console.log(enderecos_cadastrados)
+
+    mensagem.innerHTML = `${enderecos.length} CEPs cadastrados até agora!`
+    
+}
+
+</script>
