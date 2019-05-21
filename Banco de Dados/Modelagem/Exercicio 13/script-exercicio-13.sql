@@ -85,5 +85,53 @@ alter table avaliado_por add column nota int;
 select * from avaliado_por;
 
 update avaliado_por set nota = 10 
-	where fk_grupo = 3;
+	where fk_grupo = 3 and fk_aluno in (2923,9834);
+    
+update avaliado_por set nota = 8 
+	where fk_grupo = 2 and fk_aluno = 2359;
+    
+update avaliado_por set nota = 9 
+	where fk_grupo = 1 and fk_aluno = 8294;
+ 
+-- 7 Exibir a média das notas
+-- avg = average = média
+select avg(nota) from avaliado_por;
 
+-- 8 Nota mínima e nota máxima 
+select min(nota) from avaliado_por;
+select max(nota) from avaliado_por;
+
+-- 9 Exibir a soma das notas dadas aos grupos no geral
+select sum(nota) from avaliado_por;
+
+-- 10 Exibir os dados dos professores que avaliam cada grupo, os dados dos grupos a data e a hora da banca
+alter table avaliado_por add column hora_inico int;
+alter table avaliado_por add column hora_final int;
+
+update avaliado_por set hora_inico = 13
+	where fk_grupo = 3 and fk_aluno in (2923,9834);
+
+update avaliado_por set hora_final = 15
+		where fk_grupo = 2 and fk_aluno = 2359;
+        
+update avaliado_por set hora_final = 15
+	where fk_grupo = 3 and fk_aluno in (2923,9834);
+    
+update avaliado_por set hora_inico = 13
+		where fk_grupo = 2 and fk_aluno = 2359;
+        
+update avaliado_por set hora_inico = 17
+	where fk_grupo = 1 and fk_aluno = 8294;
+    
+update avaliado_por set hora_final= 19
+	where fk_grupo = 1 and fk_aluno = 8294;
+
+-- 10 Exibir os dados dos professores que avaliam cada grupo, os dados dos grupos a data e a hora da banca
+
+select * from grupo;
+
+select * from professor;
+
+select * from aluno;
+
+desc avaliado_por;
