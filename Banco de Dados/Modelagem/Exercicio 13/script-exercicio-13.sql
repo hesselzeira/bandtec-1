@@ -67,11 +67,23 @@ insert into avaliado_por values
 
 select * from avaliado_por;
 
+-- 5 Exibir todos os dados dos grupos e dos seus respectivos alunos
 select * from avaliado_por
-	inner join grupo
+	inner join grupo on fk_grupo = id_grupo
 	inner join aluno on avaliado_por.fk_aluno = aluno.RA;
     
-select * from grupo
-	inner join grupo on id_grupo = 3 
-		inner join aluno on RA.aluno = ;
+ -- 6  Exibir todos os dados de um determinado grupo e de seus respectivos alunos
+select * from avaliado_por
+	inner join grupo on id_grupo = fk_grupo 
+		inner join aluno on aluno.RA = fk_aluno
+			where id_grupo = 3;
+            
+-- 7 Exibir a média das notas
+
+alter table avaliado_por add column nota int; 
+
+select * from avaliado_por;
+
+update avaliado_por set nota = 10 
+	where fk_grupo = 3;
 
