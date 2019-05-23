@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastre seus filmes </title>
+</head>
+<body>
+    <form>
+        Título do filme: <br>
+        <input type="text" id="filme_usuario"> <br> <br>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+
+        <br><br>
+        Pesquisar por um favorito: <input type="text" id="filme_pesquisado"> <br>
+        <br>
+        <button type="button" onclick="historico()">Pesquisar</button>
+
+        <div id="msg"></div>
+        <div id="favoritos"></div>
+
+
+    </form>
+</body>
+</html>
+<script>
+    var filmes_cadastrados = []
+
+    function cadastrar(){
+        var filme = filme_usuario.value
+        var mens = ''
+
+        filmes_cadastrados.push(filme);
+
+        for (i=0; i<filmes_cadastrados.length; i++){
+        mens += `${filmes_cadastrados[i]} <br>`
+        }
+
+        msg.innerHTML = mens
+        }
+
+        function historico(){
+            var filme = filme_pesquisado.value;
+            var msg = 'Você não gosta desse filme'
+
+            for (i=0; i<filmes_cadastrados.length; i++){
+            if(filme == filmes_cadastrados[i]){
+                msg = 'Você gosta desse filme'
+            }
+    
+            }
+
+            favoritos.innerHTML = msg
+
+        }
+</script>

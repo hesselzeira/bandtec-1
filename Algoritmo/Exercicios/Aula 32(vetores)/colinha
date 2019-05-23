@@ -1,0 +1,2 @@
+nome_lista.push(item_inserido) 
+nome_lista.length = o comprimento da lista, quantos itens tem na lista 

@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CEP</title>
 </head>
+
 <body>
     <form>
 
-        Insira sem CEP <br>
+        Insira seu CEP <br>
         <input type="texto" id="cep_usuario"> <br>
         Endereço <br>
         <input type="text" id="endereco_usuario"> <br>
         Apelido <br>
         <input type="text" id="apelido_usuario" placeholder="ex:'casa' "> <br>
         <button type="button" onclick="cadastrar()">Cadastrar CEP</button>
-        
+
+        <br> <br>
+
+        <input type="text" id="cep_pesquisado"> <br>
+        <button type="button" onclick="pesquisar()">Pesquisar</button>
+
+
+
     </form>
 
     <div id="mensagem"></div>
 
 </body>
+
 </html>
 <script>
 
     var enderecos_cadastrados = []
 
-function cadastrar(){
-    
-    var endereco = {
-        cep: cep_usuario.value,
-        endereco: endereco_usuario.value,
-        apelido: apelido_usuario.value
+    function cadastrar() {
+
+        var endereco = {
+            cep: cep_usuario.value,
+            endereco: endereco_usuario.value,
+            apelido: apelido_usuario.value
+        }
+
+        enderecos_cadastrados.push(endereco)
+        // console.log(enderecos_cadastrados)
+
+        mensagem.innerHTML = `${enderecos_cadastrados.length} CEPs cadastrados até agora!`
     }
 
-    enderecos_cadastrados.push(endereco)
-    // console.log(enderecos_cadastrados)
+    function pesquisar() {
 
-    mensagem.innerHTML = `${enderecos.length} CEPs cadastrados até agora!`
-    
-}
+        var pesquisa = cep_pesquisado.value
+        
+        var frase = 'Cep não encontrado!' 
+
+        for (i = 0; i < enderecos_cadastrados.length; i++) {
+            if (enderecos_cadastrados[i].cep == pesquisa) {
+                frase= `Endereço ${enderecos_cadastrados[i].apelido}, ${enderecos_cadastrados[i].endereco}, 
+                CEP: ${enderecos_cadastrados[i].cep}`
+            }
+        }
+        mensagem.innerHTML = frase;
+    }
 
 </script>
