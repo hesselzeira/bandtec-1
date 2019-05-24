@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Insira um número qualquer: <br>
+        <input type="number" id="numero_usuario"><br>
+        <button type="button" type="button" onclick="registrar()">Registrar </button> <button type="button"
+            onclick="separar()">Ver números separados</button>
+
+        <div id="mensagem"></div>
+        <div id="numeros_separados"></div>
+
+    </form>
+</body>
+
+</html>
+<script>
+    var numeros_pares = []
+    var numeros_impares = []
+
+    function registrar() {
+        var numero = numero_usuario.value
+        var msg = 'Mensagem cadastrada!'
+
+        if (numero % 2 == 0) {
+            numeros_pares.push(numero)
+        }
+
+        else {
+            numeros_impares.push(numero)
+        }
+
+        mensagem.innerHTML = msg
+
+    }
+
+    function separar() {
+
+        var msg = ''
+
+        for (cont = 0; cont < numeros_impares.length; cont++) {
+            msg += `${numeros_impares[cont]} <br>`
+        }
+
+        for (cont = 0; cont < numeros_pares.length; cont++) {
+            msg += `${numeros_pares[cont]} <br>`
+        }
+
+
+        numeros_separados.innerHTML = msg
+    }
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filmes</title>
+</head>
+
+<body>
+    <form>
+
+        Informe o título do filme: <br>
+        <input type="text" id="filme_usuario"> <br>
+        <button type="button" onclick="cadastrar()">Cadastrar filme</button>
+        <br>
+        <br>
+
+        Pesquise um título :D : <br>
+        <input type="text" id="filme_pesquisado"> <br>
+        <button type="button" onclick="pesquisar()">Pesquisar</button>
+        <br>
+        <div id="titulos"></div>
+        <div id="pesquisados"></div>
+
+    </form>
+</body>
+
+</html>
+<script>
+    var filmes_cadastrados = []
+
+    function cadastrar() {
+        var filme = filme_usuario.value
+        var msg = ''
+
+        filmes_cadastrados.push(filme)
+
+        for (i = 0; i < filmes_cadastrados.length; i++) {
+            msg += `${filmes_cadastrados[i]} <br>`
+
+        }
+            titulos.innerHTML = msg
+    }
+
+    function pesquisar(){
+
+        var pesquisa = filme_pesquisado.value
+
+        var msg = 'Você não gosta desse filme'
+
+        for (i=0; i<filmes_cadastrados.length; i++){
+            if (pesquisa == filmes_cadastrados[i]){
+                msg = 'Você gosta desse filme :)'
+            }
+        }
+
+        pesquisados.innerHTML = msg;
+    }
+</script>

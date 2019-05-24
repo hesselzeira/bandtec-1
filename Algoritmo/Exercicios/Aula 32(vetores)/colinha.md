@@ -67,15 +67,49 @@ tarefas.push('colocar lentes')
     Agora a lista de tarefas ficará assim:
 
 ```javascript
-    console.log(tarefas)
-    // Exibirá:
-    /*
-        tarefas = [
-            'limpar a casa',        // Índice 0
-            'dar comida aos gatos', // Índice 1
-            'lavar a louça',        // Índice 2
-            'arrumar mochila',       // Índice 3
-            'colocar lentes',       // Índice 4 (novo)
-        ]
-    */
+console.log(tarefas)
+// Exibirá:
+/*
+    tarefas = [
+        'limpar a casa',        // Índice 0
+        'dar comida aos gatos', // Índice 1
+        'lavar a louça',        // Índice 2
+        'arrumar mochila',       // Índice 3
+        'colocar lentes',       // Índice 4 (novo)
+    ]
+*/
+```
+
+### Checar item por item de uma lista
+
+    É comum a necessidade de checar ou manipular item por item de uma lista.
+    Exemplo:
+
+    Você tem a sua lista de tarefas criada anteriormente e quer exibir cada um dos itens seguidos de uma quebra de linha, de forma manual, resolveu escrever o código de um por um:
+
+```javascript
+mensagem.innerHTML += `${tarefas[0]}<br>`
+mensagem.innerHTML += `${tarefas[1]}<br>`
+mensagem.innerHTML += `${tarefas[2]}<br>`
+mensagem.innerHTML += `${tarefas[3]}<br>`
+mensagem.innerHTML += `${tarefas[4]}<br>`
+// E por ai vai... (Manual)
+```
+
+    Como você já deve ter notado, esta forma é muito ineficiente, repete código e não prevê a quantidade de itens de uma lista.
+    
+    Percebe que a única coisa que muda de uma lista para a outra é o índice, que é incrementado de um em um? É o mesmo comportamento encontrado ao utilizar o contador de um "for".
+
+    Reescrevendo de maneira correta o código acima, foi utilizado o contador de um for, que a cada execução é incrementado em um, para percorrer toda a lista de tarefas e concatenar a mensagem anterior com a nova.
+
+```javascript
+    
+// Contador inicia com o valor de 0, já que você pretende vizualizar a lista desde o primeiro item
+// Enquanto o contador for menor que a quantidade de itens da lista, continuará executando o procedimento
+// A cada fim de execução, incrementa em um o valor do contador
+for(cont=0;cont<tarefas.length;cont++){
+    // Div de mensagem
+    mensagem.innerHTML += `${tarefas[cont]}<br>`
+}
+
 ```
