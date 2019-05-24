@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prova Larissa Hessel</title>
 </head>
+
 <body>
     <form>
         <h2>Informe as seguintes informações <br>
@@ -15,7 +17,7 @@
         <input type="text" id="nome_pais_usuario"> <br>
         População <br>
         <input type="number" id="numero_populacao_usuario"> <br>
-        Grau de liberdade <br> 
+        Grau de liberdade <br>
         <input type="number" id="grau_de_liberdade_usuario"> <br>
     </form>
 
@@ -25,69 +27,75 @@
     <div id="exibir_historico"></div>
 
 </body>
+
 </html>
 <script>
+    var paises_cadastrados = []
+    var historico_paises = []
 
-var paises_cadastrados =[]
-var historico_paises = []
+    function cadastrar() {
 
-function cadastrar(){
-    
-    var pais = {
-        nome: nome_pais_usuario.value,
-        populacao: numero_populacao_usuario.value,
-        grau_liberdade: grau_de_liberdade_usuario.value
+        var pais = {
+            nome: nome_pais_usuario.value,
+            populacao: numero_populacao_usuario.value,
+            grau_liberdade: grau_de_liberdade_usuario.value
+        }
+
+        paises_cadastrados.push(pais)
+
+        if (pais.populacao < 1000 || pais.grau_liberdade < 0 || pais.grau_liberdade > 100) {
+            alert('Valores inválidos!')
+        }
     }
 
-    paises_cadastrados.push(pais)
+    function historicar() {
+        // repetindo o json, pois foi a unica maneira que consegui encontrar para poder chamar o nome do país 
+        // na variavel a baixo
 
-    if (pais.populacao < 1000 || pais.grau_liberdade <0 || pais.grau_liberdade > 100){
-        alert('Valores inválidos!')
-    }
-}
+        var pais = {
+            nome: nome_pais_usuario.value,
+            populacao: numero_populacao_usuario.value,
+            grau_liberdade: grau_de_liberdade_usuario.value
+        }
 
-function historicar(){
-    var pais = {
-        nome: nome_pais_usuario.value,
-        populacao: numero_populacao_usuario.value,
-        grau_liberdade: grau_de_liberdade_usuario.value
-    }
+        var mensagem = ''
+        var liberdade = grau_de_liberdade_usuario.value
+        var liberdade_nivel = ''
 
-    var mensagem = ''
-    var liberdade = grau_de_liberdade_usuario.value
-    var liberdade_nivel = ''
+        // dando o valor adequado para cada nivel de liberdade
+        if (liberdade > 80 || liberdade < 100) {
+            var liberdade_nivel = 'Livre'
+        }
 
-    if (liberdade > 80 || liberdade < 100){
-        var liberdade_nivel = 'Livre'
-    }
+        if (liberdade > 70 || liberdade < 80) {
+            var liberdade_nivel = 'Quase livre'
+        }
 
-    if (liberdade > 70 || liberdade < 80){
-        var liberdade_nivel = 'Quase livre'
-    }
+        if (liberdade > 60 || liberdade < 70) {
+            var liberdade_nivel = 'Moderamente livre'
+        }
 
-    if (liberdade > 60 || liberdade < 70){
-        var liberdade_nivel = 'Moderamente livre'
-    }
+        if (liberdade > 50 || liberdade < 60) {
+            var liberdade_nivel = 'Quase reprimido'
+        }
 
-    if (liberdade > 50 || liberdade < 60){
-        var liberdade_nivel = 'Quase reprimido'
-    }
+        if (liberdade > 0 || liberdade < 50) {
+            var liberdade_nivel = 'Reprimido'
+        }
 
-    if (liberdade > 0 || liberdade < 50){
-        var liberdade_nivel = 'Reprimido'
-    }
 
-    for (i=0; i<paises_cadastrados.length; i++){
-        mensagem = `Pais ${paises_cadastrados.length[i]}: ${pais.nome}
-                    Categoria: ${liberdade_nivel}
+        for (i = 0; i < paises_cadastrados.length; i++) {
+
+            mensagem += `Pais ${paises_cadastrados[i]}: ${pais.nome} <br>
+                    Categoria: ${liberdade_nivel} <br>
+                    Habitantes: ${pais.populacao} <br>
+                    IDH médio provável: <br>
+                    Desemprego médio provável: % ou seja, xxxxxx talvez estejam sem emprego <br>
         `
+        }
 
-            
-        
+        exibir_historico.innerHTML = mensagem
     }
-
-    exibir_historico.innerHTML = mensagem
-}
 
 
 </script>
