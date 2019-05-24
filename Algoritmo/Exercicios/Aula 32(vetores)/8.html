@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eleva a dor</title>
 </head>
+
 <body>
     <form>
         <select id="pessoa_selecionada">
             <option value="homem">Homem</option>
             <option value="mulher">Mulher</option>
-            <option value="crianca">Criança</option>
+            <option value="bebe">bebe</option>
         </select>
     </form>
 
@@ -20,15 +22,17 @@
     <button type="button" onclick="historico()">Ver elevador</button>
 
     <div id="mensagem"></div>
+    <div id="imagens"></div>
     <div id="info"></div>
 
 </body>
+
 </html>
 <script>
 
     var pessoas_no_elevador = []
 
-    function cadastrar(){
+    function cadastrar() {
         var pessoa = pessoa_selecionada.value
         var msg = 'pessoa cadastrada com sucesso'
         pessoas_no_elevador.push(pessoa)
@@ -36,13 +40,52 @@
         mensagem.innerHTML = msg
     }
 
-    function historico(){
-        var msg = `
+    function historico() {
+
+        var msg = ''
+        
+        for (cont = 0; cont<pessoas_no_elevador.length; cont++){
+            if(pessoas_no_elevador[cont] == 'homem'){
+            imagens.innerHTML += '<img src="homi.png" alt="">'
+            }
+
+            else if(pessoas_no_elevador[cont] == 'bebe'){
+                imagens.innerHTML += '<img src="bebe.png" alt="">'
+            }
+
+            else{
+                imagens.innerHTML += '<img src="mulher.png" alt="">'
+            }
+        }
+
+
+        // ---
+
+        if (pessoas_no_elevador.length >= 1) {
+            msg += `
             A 1ª pessoa foi um(a) ${pessoas_no_elevador[0]} <br>
-            A 4ª pessoa foi um(a) ${pessoas_no_elevador[3]} <br>
-            A 7ª pessoa foi um(a) ${pessoas_no_elevador[6]} <br>
-            A última pessao foi um(a) ${pessoas_no_elevador[pessoas_no_elevador.length-1]}
         `
+        }
+
+        if (pessoas_no_elevador.length >= 4){
+            msg += `
+            A 4ª pessoa foi um(a) ${pessoas_no_elevador[3]} <br>
+        `
+        }
+
+        if (pessoas_no_elevador.length >= 7){
+            msg += `
+            A 7ª pessoa foi um(a) ${pessoas_no_elevador[6]} <br>
+        `
+        }
+
+        if (pessoas_no_elevador.length > 0){
+            msg += `
+            A última pessoa foi um(a) ${pessoas_no_elevador[pessoas_no_elevador.length -1]} <br>
+        `
+        }
+
+        info.innerHTML = msg
     }
 
 </script>
