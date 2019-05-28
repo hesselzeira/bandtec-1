@@ -1,0 +1,23 @@
+Tudo o que vimos até agora foram tabelas já normalizadas
+
+Modelagem de dados - levantamento de requisitos, em arquivos de dados existentes
+
+Partindo de documentos como faturas, ficha cadastral e etc. Então é comum ter redundância de dados. 
+
+O objetivo da normalização é garantir que não existam redundâncias.
+
+Se as anomilas passarem abatidos, a coisa vai se agravando, e as consequencias são:
+
+	Inclusão -  
+	Exclusão -	
+	Alteração -
+
+>> Critérios para normalização 
+
+	Procedimentos antigos, de 1972 - Conjunto de regrinhas <3 
+
+	Primeira Forma Normal (1FN)
+	Segunda Forma Normal (2FN)
+	Terceira forma Normal	(3FN)
+
+	Quando está na 3fn, o modelo estará normalizado, canônico

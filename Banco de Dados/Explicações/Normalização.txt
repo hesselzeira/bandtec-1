@@ -18,6 +18,38 @@ Se as anomilas passarem abatidos, a coisa vai se agravando, e as consequencias s
 
 	Primeira Forma Normal (1FN)
 	Segunda Forma Normal (2FN)
-	Terceira forma Normal	(3FN)
+	Terceira forma Normal (3FN)
+
+	Existe também a 4fn e a 5fn que se aplicam em casos específicos.
+	E formas com nomes de autores que também são para casos específicos. 
 
 	Quando está na 3fn, o modelo estará normalizado, canônico
+
+>> PRIMEIRA FORMA NORMAL 
+	
+	- Não possuir atributos multivalorados.
+	- Tabela aninhada: como se fosse uma tabela dentro de um campo
+	- Atributos atômicos (não compostos por varias partes, tipo um endereço).
+	- Definir chave primaria
+	- A ocorrência da entidade forem distintas entre si. 
+ 	
+	#DICA
+
+
+>>> SEGUNDA FORMA NORMAL
+
+	- Estar no 1FN
+	- Só vai valer se tiver chave primaria composta (se não tiver nada, não precisa fazer nada, MAS SE SIM...) 
+	- Dependencia parcial: se algum atributo pertence a chave inteira, ou só de um pedaço dele. 
+
+>>> TERCEIRA FORMA NORMAL
+	
+	- Estar na 2FN 
+	- Ver se tem 
+		Dependencia Transitiva: Um campo que não pertence à 
+		chave primaria
+	- Todos os da tabela dos atributos tem que depender 	exclusivamente da PK 
+
+
+
+A normalização se aplica entre a modelagem lógica e física
