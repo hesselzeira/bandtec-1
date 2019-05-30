@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+
+
+</head>
+
+<body>
+
+    <!-- nav é a tag de navegação ou barra de navegação -->
+    <nav>
+        <div class="titulo">
+            <a href="">My Music</a>
+        </div>
+        <div class="botao-nav">
+            <a href="index.html">Novas Músicas</a>
+        </div>
+        <div class="botao-nav">
+            <a href="" class="ativa">Biblioteca</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Biblioteca</h1>
+    </header>
+
+    <main class="bk-biblioteca" id='card_container'>
+        
+    </main>
+
+    <!-- footer é o roda pé  -->
+    <footer>BY HESSEL</footer>
+
+</body>
+
+</html>
+
+<script>
+
+    function adicionarCard(titulo, artista, album, genero, ano){
+        card_container.innerHTML += `
+        <div class="card">
+
+            <div class="card-img">
+                <img src="imagem/musica.png" alt="Albúm Blood Sugar Sex Magik" width="100">
+            </div>
+
+            <div class="card-infos">
+                <h1 class="bold">${titulo}</h1>
+                <h2 class="light">${artista}</h2>
+                <h4 class="light">${genero}</h4>
+                <h3 class="bold">Album: ${album} (${ano})</h3>
+            </div>
+
+        </div>
+        `
+    }
+    
+    function listar() {
+
+        // aguardar();
+        fetch("/leituras/ultimas", {
+            method: "GET"
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                response.json().then(function (resposta) {
+                    console.log(resposta)
+
+                    for (cont = 0; cont < resposta.length ; cont++ ){
+                        var musica = resposta[cont]
+                        adicionarCard(musica.titulo_musica, musica.artista, musica.album, musica.genero, musica.ano)
+                    }
+
+                });
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.json().then(function (resposta) {
+                    // div_erro.innerHTML = resposta;
+                });
+                // finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+    
+
+    function aguardar() {
+        // btn_entrar.disabled = true;
+        // img_aguarde.style.display='block';
+        // div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        // btn_entrar.disabled = false;
+        // img_aguarde.style.display='none';
+        // div_erro.style.display='block';
+    }
+
+    listar()
+</script>

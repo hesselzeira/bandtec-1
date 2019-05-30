@@ -90,5 +90,19 @@ select * from produto
 		where id_categoria = 2;
         
 -- 7. Exibir a média e a soma dos preços dos produtos, no geral.
-select avg(preco) from vendido_em;
+select avg(preco_atual) from vendido_em;
+select sum(preco_atual) from vendido_em;
 
+-- 8. Exibir o menor preço e o maior preço dos produtos, no geral.
+select min(preco_atual) from vendido_em;
+select max(preco_atual) from vendido_em;  
+
+-- 9. Exibir os dados dos produtos, os dados das lojas correspondentes e os preços dos produtos em cada loja.
+select * from vendido_em
+	inner join loja on id_loja = fk_loja
+		inner join produto;
+        
+
+
+
+		

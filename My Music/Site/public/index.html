@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Início</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+    <!-- nav é a tag de navegação ou barra de navegação -->
+    <nav>
+        <div class="titulo"> My Music</div>
+
+        <div class="botao-nav">
+            <a href="index.html" class="ativa">Novas Músicas</a>
+        </div>
+
+        <div class="botao-nav">
+            <a href="biblioteca.html">Biblioteca</a>
+        </div>
+
+    </nav>
+
+    <!-- header é o cabeçalho -->
+    <header>
+
+        <h1>My Music</h1>
+        <h2 class='mb-4'>Bem vindo à sua biblioteca musical! Gerencie suas músicas, organize seus gostos.</h2>
+
+        <!-- é igual o botão porém ele é apenas para navegação e não necessita da tag <button></button> -->
+        <a class="boto" href="biblioteca.html">Visualizar biblioteca</a>
+
+    </header>
+
+    <!-- o main é o assunto principal do site -->
+    <main>
+
+
+        <form class="form-add-music" id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
+            <p>Cadastre <b> novas músicas que serão adicionadas em sua biblioteca </b> de gerenciamento musical :)</p>
+
+            <div class='form-container'>
+                <div class="w100 campo">
+                        <label for="titulo">Título da música</label> 
+                            <input type="text" id="titulo" placeholder="Suck My Kiss" required name="titulo">
+                </div>
+                
+                <div class="w50 campo">
+                        <label for="artista">Artista</label>   
+                            <input type="text" id="artista"placeholder="Red Hot Chili Peppers" required name="artista">
+                </div>
+
+                <div class="w50 campo">
+                        <label for="genero">Gênero</label> 
+                            <input type="text" id="genero" placeholder="Funk" required name="genero">
+                </div>
+
+                <div class="w75 campo">
+                        <label for="album">Albúm</label> 
+                            <input type="text" id="album" placeholder="Blood Sugar Sex Magik" required name="album">
+                </div>
+
+                <div class="w25 campo">
+                        <label for="ano">Ano</label> 
+                            <input type="number" id="ano" placeholder="1991" required name="ano">
+                 </div>
+
+            </div>
+
+            <button class="boto w-50" type="submit">Cadastrar Música</button>
+
+        </form>
+    </main>
+
+    <!-- footer é o roda pé  -->
+    <footer>BY HESSEL</footer>
+
+</body>
+
+</html>
+<script>
+
+    var musicas_cadastradas = []
+
+    function cadastrar(){
+        var formulario = {
+            titulo: titulo.value,
+            artista: artista.value,
+            genero: genero.value,
+            album: album.value,
+            ano: ano.value
+        }
+
+        if(formulario.ano < 1000 || formulario.ano > 9999){
+            alert('Ano inválido!')
+        }
+
+        if (formulario.titulo.length < 3){
+            alert('Título inválido!')
+        }
+
+        if (formulario.artista.length < 3){
+            alert('Artista inválido!')
+        }
+
+        if (formulario.genero.length < 3){
+            alert('Gênero inválido!')
+        }
+        if (formulario.album.length < 3){
+            alert('Albúm inválido!')
+        }
+
+        
+        // aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/leituras/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                // window.location.href='login.html';
+                alert('Musica cadastrada com sucesso! Confira na biblioteca :)')
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    // div_erro.innerHTML = resposta;
+                });
+                // finalizar_aguardar();
+            }
+        });
+
+        return false;
+
+    }
+</script>
