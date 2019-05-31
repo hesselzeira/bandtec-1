@@ -23,7 +23,7 @@
 function vai(){
     mensagem.innerHTML = '';
     comer_fruta();
-    // comer_proteina();
+    comer_proteina();
 }
 
 
@@ -39,4 +39,12 @@ function comer_fruta(){
         }
 }
 
+function comer_proteina(){
+    mensagem.innerHTML += 'Comendo proteína! <br>';
+    proteinas++;
+
+    if(proteinas<2) {
+        setTimeout(comer_proteina, 3000)
+    }
+}
 </script>
