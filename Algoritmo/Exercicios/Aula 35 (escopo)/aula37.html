@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio :)</title>
+</head>
+
+<body>
+    Digita o que quiser ae
+    <input type="text" id="palavra_usuario"> <br>
+    <button type="button" onclick="salvar()">Salvar</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    let palavras_salvas = []
+
+    function salvar() {
+
+        let palavra = palavra_usuario.value
+        let histórico = `${palavras_salvas}, <br>`
+
+        if (palavras.length == 0) {
+            palavras_salvas.push(palavra_usuario.value)
+
+        }
+
+        else {
+            for (i = 0; i < palavras_salvas.length; i++) {
+                if (palavra == palavras_salvas[i]) {
+                    alert('Opa, palavra repetida')
+                    break;
+                }
+            }
+
+            div_mensagem.innerHTML = histórico
+
+        }
+
+        if (i == palavras_salvas.length) {
+            palavras_salvas.push(palavra.value)
+        }
+    }
+</script>

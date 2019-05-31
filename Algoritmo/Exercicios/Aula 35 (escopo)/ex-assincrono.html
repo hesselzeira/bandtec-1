@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <button type="button" onclick="vai()">
+                Vai!
+            </button>
+        
+            <div id="mensagem"></div>
+            <div id=""></div>
+</body>
+</html>
+<script>
+
+    let frutas = 0;
+    let proteinas = 0;
+
+function vai(){
+    mensagem.innerHTML = '';
+    comer_fruta();
+    // comer_proteina();
+}
+
+
+function comer_fruta(){
+    mensagem.innerHTML += 'Comendo uma fruta! <br>';
+    frutas++;
+        if(frutas<3){
+            //Agendamos 1 execução da própria função
+            // para daqui a 2s
+            setTimeout(comer_fruta,2000);
+            //quando uma função chama ela mesma
+            //estamos fazendo algo chamado 'RECURSIVIDADE'
+        }
+}
+
+</script>
